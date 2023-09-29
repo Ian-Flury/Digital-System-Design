@@ -1,0 +1,23 @@
+# Reading pref.tcl
+# vsim -gui -voptargs="+acc" work.D_Flip_Flop_tb -do "waves.do" 
+# Start time: 10:10:52 on Sep 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.d_flip_flop_tb(tb)
+# Loading work.d_flip_flop(rtl)
+# waves.do
+# invalid command name "waves.do"
+add wave -position insertpoint  \
+sim:/d_flip_flop_tb/CLK_net \
+sim:/d_flip_flop_tb/Clr_net \
+sim:/d_flip_flop_tb/Set_net \
+sim:/d_flip_flop_tb/D_net \
+sim:/d_flip_flop_tb/Q_net \
+sim:/d_flip_flop_tb/period_c
+run -a
+# ** Failure: End of TestBench
+#    Time: 50 ns  Iteration: 0  Process: /d_flip_flop_tb/tb File: ./D_Flip_Flop_tb.vhd
+# Break in Process tb at ./D_Flip_Flop_tb.vhd line 65
+# End time: 10:15:42 on Sep 21,2023, Elapsed time: 0:04:50
+# Errors: 1, Warnings: 0

@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ianfl/MobaXterm/home
+Elight
+Z0 w1693950883
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 12
+Z3 dC:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/modelsim/light
+Z4 8C:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/light.vhd
+Z5 FC:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/light.vhd
+l0
+L4 1
+V2QN?h@WBUFSJj64F7fWZC3
+!s100 >i^gjf7_0H[G6hDT6U1MS2
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1694554853
+!i10b 1
+Z8 !s108 1694554853.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/light.vhd|
+Z10 !s107 C:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/light.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+DEx4 work 5 light 0 22 2QN?h@WBUFSJj64F7fWZC3
+!i122 12
+l10
+L9 4
+V^FcOI_ZP[BIkoF_;FJZk_2
+!s100 `9@7E]MezVJPoX7FRdz=c2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Elight_tb
+Z13 w1693952725
+R1
+R2
+!i122 13
+R3
+Z14 8C:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/modelsim/light/lightVDH.vhd
+Z15 FC:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/modelsim/light/lightVDH.vhd
+l0
+L3 1
+VM0A;zOE37?b;6SKMU`Z_J1
+!s100 I1Iz4`[9Uhb_0GVP5Pd6o2
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/modelsim/light/lightVDH.vhd|
+Z17 !s107 C:/Users/ianfl/MobaXterm/home/QuartusProjects/Tut1Dir/modelsim/light/lightVDH.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+Z18 DEx4 work 8 light_tb 0 22 M0A;zOE37?b;6SKMU`Z_J1
+!i122 13
+l18
+Z19 L6 61
+Z20 VGdcFOESHAONY6a0z18]TX1
+Z21 !s100 gfkK]Oh0zJCPk>U;Y;9Z@0
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12

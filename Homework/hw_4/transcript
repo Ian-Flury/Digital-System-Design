@@ -1,0 +1,17 @@
+# Reading pref.tcl
+# vsim -gui -voptargs="+acc" work.hw4_tb -do "waves.do" 
+# Start time: 11:42:13 on Sep 26,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.hw4_tb(tb)
+# Loading work.hw4(rtl)
+add wave -position insertpoint sim:/hw4_tb/*
+# waves.do
+# invalid command name "waves.do"
+run -a
+# ** Failure: End of TestBench
+#    Time: 65 ns  Iteration: 0  Process: /hw4_tb/tb File: ./hw4_tb.vhd
+# Break in Process tb at ./hw4_tb.vhd line 60
+# End time: 11:43:27 on Sep 26,2023, Elapsed time: 0:01:14
+# Errors: 1, Warnings: 0
