@@ -53,9 +53,14 @@ begin
             wait for 50 ns;
             KEY0_net <= '1';
 
-
-
             wait for 350 ns;
+
+            KEY0_net <= '0';
+            wait for 50 ns;
+            KEY0_net <= '1';
+
+            wait for 300 ns;
+
         assert false
         report "End of TestBench"
         severity failure;

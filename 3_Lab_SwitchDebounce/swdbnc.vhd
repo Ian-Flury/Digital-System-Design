@@ -88,7 +88,6 @@ begin
                 LED_FLAG <= '0';
             elsif rst_state = '1' then
                 count2 := (others => '0');
-                --LED_FLAG <= '0';
             elsif ENAB2 = '1' then
                 count2 := count2 + 1;
                 if count2 > LIMIT_c then
