@@ -1,0 +1,8 @@
+alias ls='ls -F'
+alias ll='ls -lA'
+alias la='ls -A'
+alias cdh='cd /home/ianfl'
+alias quartus='/mnt/c/intelFPGA_lite/20.1/quartus/bin64/quartus'
+alias modelsim='/mnt/c/intelFPGA_lite/20.1/modelsim_ase/win32aloem/modelsim'
+alias iverilog='/mnt/c/iverilog/bin/iverilog'
+alias gtkwave='/mnt/c/iverilog/gtkwave/bin/gtkwave'

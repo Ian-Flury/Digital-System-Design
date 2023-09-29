@@ -1,6 +1,6 @@
 # Reading pref.tcl
 # vsim -gui -voptargs="+acc" work.swdbnc_tb -do "./scripts/waves.do" 
-# Start time: 11:02:41 on Sep 29,2023
+# Start time: 16:10:13 on Sep 29,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -15,3 +15,5 @@
 # Break in Process tb at ./swdbnc_tb.vhd line 65
 # 0 ps
 # 918750 ps
+# End time: 16:10:26 on Sep 29,2023, Elapsed time: 0:00:13
+# Errors: 1, Warnings: 0
