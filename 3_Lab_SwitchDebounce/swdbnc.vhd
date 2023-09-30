@@ -37,7 +37,6 @@ architecture rtl of swdbnc is
      signal rst_state	 : std_logic;
      
      signal prev_state : std_logic;
-     signal cur_state : std_logic;
      signal led_state : std_logic;
 
 begin
@@ -45,7 +44,10 @@ begin
     pressed_p: process(CLK_50M)
     begin
         if CLK_50M'EVENT and CLK_50M = '1' then
-            if (KEY0 <= '0') and (prev_state = '1') then
+            if rst_state = '1' then
+                ENAB1 <= '0';
+                prev_state <= KEY0;
+            elsif (KEY0 <= '0') and (prev_state = '1') then
                 ENAB1 <= '1';
                 prev_state <= KEY0;
                 else
@@ -62,8 +64,10 @@ begin
         if CLK_50M'EVENT and CLK_50M = '1' then
             if RST = '1' then
                 count1 := (others => '0');
+                ENAB2 <= '0';
             elsif rst_state = '1' then
                 count1 := (others => '0');
+                ENAB2 <= '0';
             elsif ENAB1 = '1' then
                 count1 := count1 + 1;
                 if count1 > LIMIT_c then
@@ -84,10 +88,13 @@ begin
         if CLK_50M'EVENT and CLK_50M = '1' then
             if RST = '1' then
                 count2 := (others => '0');
+                LED_FLAG <= '0';
             elsif led_flag_off = '1' then
                 LED_FLAG <= '0';
+                led_flag_off <= '0'; 
             elsif rst_state = '1' then
                 count2 := (others => '0');
+                led_flag <= '0';
             elsif ENAB2 = '1' then
                 count2 := count2 + 1;
                 if count2 > LIMIT_c then
@@ -107,7 +114,9 @@ begin
         if CLK_50M'EVENT and CLK_50M = '1' then
             if RST = '1' then
                 led_state <= '0';
-                LEDG0 <= '0';
+                rst_state <= '1';
+            elsif rst_state = '1' then
+                rst_state <= '0';
             elsif LED_FLAG = '1' then
                 if KEY0 = '1' then
                     led_state <= not led_state;
@@ -118,8 +127,8 @@ begin
             end if;
         else
         end if;
-        LEDG0 <= led_state;
-    end process;
+        end process;
+    LEDG0 <= led_state;
 
 
     reset_p: process(CLK_50M)

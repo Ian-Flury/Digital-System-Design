@@ -42,11 +42,16 @@ begin
 
     tb: process
         begin
+            -- setup signals
+            KEY0_net <= '1';
+            
+            -- do a reset
             KEY3_net <= '0';
             wait for 50 ns;
             KEY3_net <= '1';
             wait for 25 ns;
             
+            -- first button press
             KEY0_net <= '1';
             wait for 50 ns;
             KEY0_net <= '0';
@@ -55,11 +60,12 @@ begin
 
             wait for 350 ns;
 
+            -- second button press
             KEY0_net <= '0';
             wait for 50 ns;
             KEY0_net <= '1';
 
-            wait for 300 ns;
+            wait for 350 ns;
 
         assert false
         report "End of TestBench"
