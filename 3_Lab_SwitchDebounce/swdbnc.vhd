@@ -28,6 +28,8 @@ end swdbnc;
      
 architecture rtl of swdbnc is
     
+    -- set LIMIT_c to 10 for simulation
+    -- should be 2500000 for synthesis
      constant LIMIT_c : integer := 10;
      signal ENAB1		 : std_logic;
      signal ENAB2 		 : std_logic;
@@ -50,10 +52,9 @@ begin
             elsif (KEY0 <= '0') and (prev_state = '1') then
                 ENAB1 <= '1';
                 prev_state <= KEY0;
-                else
+            else
                 prev_state <= KEY0;
             end if;
-        else
         end if;
     end process;
 
@@ -72,12 +73,8 @@ begin
                 count1 := count1 + 1;
                 if count1 > LIMIT_c then
                     ENAB2 <= '1';
-                else
-                    
                 end if;
-            else
             end if;
-        else
         end if;
     end process;
     
@@ -103,9 +100,7 @@ begin
                 else
                     
                 end if;
-            else
             end if;
-        else
         end if;
     end process;
 
@@ -121,11 +116,8 @@ begin
                 if KEY0 = '1' then
                     led_state <= not led_state;
                     rst_state <= '1';
-                else
                 end if;
-            else
             end if;
-        else
         end if;
         end process;
     LEDG0 <= led_state;
@@ -140,7 +132,6 @@ begin
             else
                 RST <= '0';
             end if;
-        else
         end if;
     end process;
 

@@ -1,6 +1,6 @@
 # Reading pref.tcl
 # vsim -gui -voptargs="+acc" work.swdbnc_tb -do "./scripts/waves.do" 
-# Start time: 10:19:50 on Sep 30,2023
+# Start time: 12:07:25 on Oct 03,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -12,6 +12,6 @@
 # do ./scripts/waves.do
 # ** Failure: End of TestBench
 #    Time: 925 ns  Iteration: 0  Process: /swdbnc_tb/tb File: ./swdbnc_tb.vhd
-# Break in Process tb at ./swdbnc_tb.vhd line 71
+# Break in Process tb at ./swdbnc_tb.vhd line 78
 # 0 ps
 # 971250 ps

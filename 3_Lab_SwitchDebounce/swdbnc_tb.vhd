@@ -1,3 +1,10 @@
+-- 
+-- Authors: Ian Flury, Joey Macauley
+-- file: swdbnc_tb.vhd
+-- comments: This code implements a basic TestBench for the 
+--           switch debouncer circuit defined in swdbnc.vhd
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 use work.all;

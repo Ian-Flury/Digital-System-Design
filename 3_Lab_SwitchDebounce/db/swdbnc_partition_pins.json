@@ -14,6 +14,10 @@
 				{
 					"name" : "CLK_50M",
 					"strict" : false
+				},
+				{
+					"name" : "KEY3",
+					"strict" : false
 				}
 			]
 		}

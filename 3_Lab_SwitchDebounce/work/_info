@@ -10,13 +10,13 @@ z2
 cModel Technology
 Z0 dC:/Users/ianfl/MobaXterm/home/QuartusProjects/3_Lab_SwitchDebounce
 Eswdbnc
-Z1 w1696094376
+Z1 w1696360036
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 168
+!i122 182
 R0
 Z7 8./swdbnc.vhd
 Z8 F./swdbnc.vhd
@@ -26,9 +26,9 @@ VmX8M7W]]W9oW5>S96e@<n2
 !s100 _Z[7@>m?0S<=G=Ti2DjZ`2
 Z9 OV;C;2020.1;71
 33
-Z10 !s110 1696094384
+Z10 !s110 1696360038
 !i10b 1
-Z11 !s108 1696094383.000000
+Z11 !s108 1696360038.000000
 Z12 !s90 -work|work|-2008|-explicit|./swdbnc.vhd|
 Z13 !s107 ./swdbnc.vhd|
 !i113 1
@@ -41,11 +41,11 @@ R4
 R5
 R6
 DEx4 work 6 swdbnc 0 22 mX8M7W]]W9oW5>S96e@<n2
-!i122 168
-l42
-L29 119
-V>P5XmGf:<Wg=lSaDZVmjI3
-!s100 oQS`:CSczOKkldSSBegN@2
+!i122 182
+l44
+L29 110
+V;0d9XGXKDIHXTCI:85S8[2
+!s100 ?3bX06DjRYdiLme>D`j;A0
 R9
 33
 R10
@@ -57,43 +57,43 @@ R13
 R14
 R15
 Eswdbnc_tb
-Z16 w1696093573
+Z16 w1696190093
 R5
 R6
-!i122 169
+!i122 183
 R0
 Z17 8./swdbnc_tb.vhd
 Z18 F./swdbnc_tb.vhd
 l0
-L5 1
-VEmM;>^[zF7mgfaRRY4Xob1
-!s100 UNnlVN:UD7V[FkcPogB]o0
+L12 1
+VnHcdgO?cehUaD:Xz0_E_V3
+!s100 E]7E[2kPGXQFH01S^]7@_0
 R9
 33
 R10
 !i10b 1
-Z19 !s108 1696094384.000000
-Z20 !s90 -work|work|-2008|-explicit|./swdbnc_tb.vhd|
-Z21 !s107 ./swdbnc_tb.vhd|
+R11
+Z19 !s90 -work|work|-2008|-explicit|./swdbnc_tb.vhd|
+Z20 !s107 ./swdbnc_tb.vhd|
 !i113 1
 R14
 R15
 Atb
 R5
 R6
-Z22 DEx4 work 9 swdbnc_tb 0 22 EmM;>^[zF7mgfaRRY4Xob1
-!i122 169
-l25
-Z23 L8 68
-Z24 Vl=R=C_:^_NF=0KXPKfjVL3
-Z25 !s100 cI^2WNekYHX0iD;zR8be73
+Z21 DEx4 work 9 swdbnc_tb 0 22 nHcdgO?cehUaD:Xz0_E_V3
+!i122 183
+l32
+Z22 L15 68
+Z23 V1Ze67m<[7[kdP6Bief=>92
+Z24 !s100 6ne>AJYR_4a9E@0PhW8o11
 R9
 33
 R10
 !i10b 1
+R11
 R19
 R20
-R21
 !i113 1
 R14
 R15
