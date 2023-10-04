@@ -1,0 +1,18 @@
+# Reading pref.tcl
+# vsim -gui -voptargs="+acc" work.tail_light_top_tb -do "./scripts/waves.do" 
+# Start time: 18:13:24 on Oct 03,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tail_light_top_tb(tb)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tail_light_top(structural)
+# Loading work.counter(rtl)
+# do ./scripts/waves.do
+# ** Failure: End of TestBench
+#    Time: 500 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
+# Break in Process tb_p at ./TLSM_tb.vhd line 55
+# 0 ps
+# 525 ns
