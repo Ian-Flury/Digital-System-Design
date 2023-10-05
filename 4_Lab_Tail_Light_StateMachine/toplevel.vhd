@@ -8,7 +8,8 @@ use work.all;
 entity tail_light_top is
     port(
         clock_50M   : in std_logic;
-        RST_top     : in std_logic;
+        KEY3        : in std_logic;                         -- RST key
+        SW          : in std_logic_vector(2 downto 0);
         lights      : out std_logic_vector(5 downto 0);
         clock_out   : out std_logic
     );
@@ -20,21 +21,29 @@ component counter
     port(
         clock       : in std_logic;
         RST         : in std_logic;
-        clock_24    : out std_logic
+        clock_slow    : out std_logic
     );
 end component;
 
 component tailLight
     port(
-        clock_24 : in std_logic;
-        lights   : out std_logic_vector(5 downto 0)
+        clock_slow    : in std_logic;
+        RST         : in std_logic;
+        switches    : in std_logic_vector(2 downto 0);
+        lights      : out std_logic_vector(5 downto 0)
     );
 end component;
 
 begin
 
-    counter_1: counter port map(clock => clock_50M, RST => RST_top, clock_24 => clock_out);
+    counter_1: counter port map(clock => clock_50M, RST => KEY3, clock_slow => clock_out);
 
-    tailLight_1: tailLight port map(clock_24 => clock_out, lights => lights);
+    tailLight_1: tailLight port 
+    map(
+        clock_slow => clock_out,
+        RST => KEY3,
+        switches => SW,
+        lights => lights
+    );
 
 end structural; -- tail_light_top

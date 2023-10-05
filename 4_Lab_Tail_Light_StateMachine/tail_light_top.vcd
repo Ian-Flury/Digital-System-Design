@@ -1,5 +1,5 @@
 $date
-	Thu Oct 05 11:18:24 2023
+	Thu Oct 05 11:31:30 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -12,14 +12,17 @@ $scope module tail_light_top_tb $end
 
 $scope module tail_light_top_instance $end
 $var wire 1 ! clock_50M $end
-$var wire 1 " RST_top $end
-$var wire 1 # lights [5] $end
-$var wire 1 $ lights [4] $end
-$var wire 1 % lights [3] $end
-$var wire 1 & lights [2] $end
-$var wire 1 ' lights [1] $end
-$var wire 1 ( lights [0] $end
-$var wire 1 ) clock_out $end
+$var wire 1 " KEY3 $end
+$var wire 1 # SW [2] $end
+$var wire 1 $ SW [1] $end
+$var wire 1 % SW [0] $end
+$var wire 1 & lights [5] $end
+$var wire 1 ' lights [4] $end
+$var wire 1 ( lights [3] $end
+$var wire 1 ) lights [2] $end
+$var wire 1 * lights [1] $end
+$var wire 1 + lights [0] $end
+$var wire 1 , clock_out $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -27,13 +30,16 @@ $enddefinitions $end
 $dumpvars
 1!
 0"
-0)
-x#
-x$
-x%
+0,
+0#
+0$
+0%
 x&
 x'
 x(
+x)
+x*
+x+
 $end
 #20000
 0!
@@ -43,7 +49,7 @@ $end
 0!
 #80000
 1!
-1)
+1,
 #100000
 0!
 #120000
@@ -56,7 +62,7 @@ $end
 0!
 #200000
 1!
-0)
+0,
 #220000
 0!
 #240000
@@ -69,7 +75,7 @@ $end
 0!
 #320000
 1!
-1)
+1,
 #340000
 0!
 #360000
@@ -82,7 +88,7 @@ $end
 0!
 #440000
 1!
-0)
+0,
 #460000
 0!
 #480000

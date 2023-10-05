@@ -16,13 +16,17 @@ architecture tb of tail_light_top_tb is
     constant period_c : time := 20 ns;
 
     signal clock_net    : std_logic;
-    signal clock_24_net : std_logic;
-    signal RST_top_net  : std_logic;
+    signal clock_slow : std_logic;
+    signal KEY3_net  : std_logic;
+    signal SW_net   : std_logic_vector(2 downto 0);
+    signal lights_net : std_logic_vector(5 downto 0);
 
     component tail_light_top
         port(
             clock_50M   : in std_logic;
-            RST_top     : in std_logic;
+            KEY3        : in std_logic;                         -- RST key
+            SW          : in std_logic_vector(2 downto 0);
+            lights      : out std_logic_vector(5 downto 0);
             clock_out   : out std_logic
         );
     end component tail_light_top;
@@ -32,8 +36,10 @@ begin
     tail_light_top_instance: tail_light_top
     port map(
         clock_50M => clock_net,
-        RST_top => RST_top_net,
-        clock_out => clock_24_net
+        KEY3 => KEY3_net,
+        SW => SW_net,
+        lights => lights_net,
+        clock_out => clock_slow
     );
     
     tb_clk: process
@@ -46,8 +52,9 @@ begin
 
     tb_p: process
     begin
-        RST_top_net <= '1' after 20 ns;
-        RST_top_net <= '0';
+        SW_net <= (others => '0');
+        KEY3_net <= '1' after 20 ns;
+        KEY3_net <= '0';
 
         wait for 500 ns;
 

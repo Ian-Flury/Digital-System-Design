@@ -1,6 +1,6 @@
 # Reading pref.tcl
 # vsim -gui -voptargs="+acc" work.tail_light_top_tb -do "./scripts/waves.do" 
-# Start time: 11:18:20 on Oct 05,2023
+# Start time: 11:31:27 on Oct 05,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -12,17 +12,23 @@
 # Loading work.counter(rtl)
 # ** Warning: (vsim-3473) Component instance "tailLight_1 : tailLight" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /tail_light_top_tb/tail_light_top_instance File: ./toplevel.vhd
+# ** Warning: (vsim-8684) No drivers exist on out port /tail_light_top_tb/tail_light_top_instance/lights, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tail_light_top_tb/lights_net.
 # do ./scripts/waves.do
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-3473) Component instance "tailLight_1 : tailLight" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /tail_light_top_tb/tail_light_top_instance File: ./toplevel.vhd
+# ** Warning: (vsim-8684) No drivers exist on out port /tail_light_top_tb/tail_light_top_instance/lights, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /tail_light_top_tb/lights_net.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ianfl  Hostname: IANS-PC  ProcessID: 28564
-#           Attempting to use alternate WLF file "./wlftk83gbe".
+#           Attempting to use alternate WLF file "./wlftcs4t2q".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftk83gbe
+#           Using alternate file: ./wlftcs4t2q
 # ** Failure: End of TestBench
 #    Time: 500 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
-# Break in Process tb_p at ./TLSM_tb.vhd line 55
+# Break in Process tb_p at ./TLSM_tb.vhd line 62
 # 0 ps
 # 525 ns
