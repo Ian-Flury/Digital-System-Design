@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ianfl/MobaXterm/home/QuartusProjects/Homework/5_hw
+Ehw4_tb
+Z1 w1695753719
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8./hw5_tb.vhd
+Z5 F./hw5_tb.vhd
+l0
+L5 1
+Vn@EmFG[HeEl_K2bgi9lkV3
+!s100 HbkPIHflc[li33?ekaMY31
+Z6 OV;C;2020.1;71
+33
+Z7 !s110 1696207878
+!i10b 1
+Z8 !s108 1696207878.000000
+Z9 !s90 -work|work|-2008|-explicit|./hw5_tb.vhd|
+Z10 !s107 ./hw5_tb.vhd|
+!i113 1
+Z11 o-work work -2008 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Atb
+R2
+R3
+DEx4 work 6 hw4_tb 0 22 n@EmFG[HeEl_K2bgi9lkV3
+!i122 2
+l24
+L8 57
+V@dhm>HVmBVZAHgZ2LH9cK3
+!s100 `I:_o]bQc3V<E3@@d<ZZJ3
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ehw5
+Z13 w1696262858
+R2
+R3
+!i122 40
+R0
+Z14 8./hw5.vhd
+Z15 F./hw5.vhd
+l0
+L7 1
+Vf:e;TeWbzP79dAZ]]X>9j1
+!s100 ]i8<_S@7cY@<9Aim[7d;`2
+R6
+33
+Z16 !s110 1696262909
+!i10b 1
+Z17 !s108 1696262908.000000
+Z18 !s90 -work|work|-2008|-explicit|./hw5.vhd|
+Z19 !s107 ./hw5.vhd|
+!i113 1
+R11
+R12
+Artl
+R2
+R3
+DEx4 work 3 hw5 0 22 f:e;TeWbzP79dAZ]]X>9j1
+!i122 40
+l18
+L16 23
+V[S6Ha2g3BHcc4N=ziOZlV1
+!s100 UUi8JV3Q5elkDTdKP]e0b2
+R6
+33
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Ehw5_tb
+Z20 w1696211508
+R2
+R3
+!i122 41
+R0
+R4
+R5
+l0
+L5 1
+VV5_:B=z[;4RPZAB]RaYVl3
+!s100 J^TIkO^g^>47[ZR?D7]U`0
+R6
+33
+R16
+!i10b 1
+Z21 !s108 1696262909.000000
+R9
+R10
+!i113 1
+R11
+R12
+Atb
+R2
+R3
+Z22 DEx4 work 6 hw5_tb 0 22 V5_:B=z[;4RPZAB]RaYVl3
+!i122 41
+l22
+Z23 L8 52
+Z24 V`F3Oc8A]g6gT9Z3JCOm]F1
+Z25 !s100 9^E4aaW[`Y:A5fGRdJ52f1
+R6
+33
+R16
+!i10b 1
+R21
+R9
+R10
+!i113 1
+R11
+R12

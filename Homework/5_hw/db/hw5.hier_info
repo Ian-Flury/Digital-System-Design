@@ -1,0 +1,11 @@
+|hw5
+S => SR_latch.IN0
+S => SR_latch.IN0
+S => SR_latch.IN0
+R => SR_latch.IN1
+R => SR_latch.IN1
+R => SR_latch.IN1
+Q <= Q_sig.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= Q_sig.DB_MAX_OUTPUT_PORT_TYPE
+
+

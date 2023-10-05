@@ -1,0 +1,12 @@
+|hw5
+Clr => Q~reg0.ACLR
+Clk => Q~reg0.CLK
+CE => Q~reg0.ENA
+C => Q.OUTPUTSELECT
+A => Q.IN0
+A => Q.IN0
+B => Q.IN1
+B => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

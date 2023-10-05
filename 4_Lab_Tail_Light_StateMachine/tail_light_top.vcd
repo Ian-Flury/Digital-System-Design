@@ -1,0 +1,89 @@
+$date
+	Thu Oct 05 11:18:24 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module tail_light_top_tb $end
+
+$scope module tail_light_top_instance $end
+$var wire 1 ! clock_50M $end
+$var wire 1 " RST_top $end
+$var wire 1 # lights [5] $end
+$var wire 1 $ lights [4] $end
+$var wire 1 % lights [3] $end
+$var wire 1 & lights [2] $end
+$var wire 1 ' lights [1] $end
+$var wire 1 ( lights [0] $end
+$var wire 1 ) clock_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0)
+x#
+x$
+x%
+x&
+x'
+x(
+$end
+#20000
+0!
+#40000
+1!
+#60000
+0!
+#80000
+1!
+1)
+#100000
+0!
+#120000
+1!
+#140000
+0!
+#160000
+1!
+#180000
+0!
+#200000
+1!
+0)
+#220000
+0!
+#240000
+1!
+#260000
+0!
+#280000
+1!
+#300000
+0!
+#320000
+1!
+1)
+#340000
+0!
+#360000
+1!
+#380000
+0!
+#400000
+1!
+#420000
+0!
+#440000
+1!
+0)
+#460000
+0!
+#480000
+1!

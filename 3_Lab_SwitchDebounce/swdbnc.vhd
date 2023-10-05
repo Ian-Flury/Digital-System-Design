@@ -30,7 +30,7 @@ architecture rtl of swdbnc is
     
     -- set LIMIT_c to 10 for simulation
     -- should be 2500000 for synthesis
-     constant LIMIT_c : integer := 10;
+     constant LIMIT_c : integer := 2500000;
      signal ENAB1		 : std_logic;
      signal ENAB2 		 : std_logic;
      signal RST			 : std_logic;
