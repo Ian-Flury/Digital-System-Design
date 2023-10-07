@@ -21,13 +21,13 @@ component counter
     port(
         clock       : in std_logic;
         RST         : in std_logic;
-        clock_slow    : out std_logic
+        clock_slow  : out std_logic
     );
 end component;
 
 component tailLight
     port(
-        clock_slow    : in std_logic;
+        clock_slow  : in std_logic;
         RST         : in std_logic;
         switches    : in std_logic_vector(2 downto 0);
         lights      : out std_logic_vector(5 downto 0)

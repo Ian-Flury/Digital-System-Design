@@ -16,10 +16,10 @@ architecture tb of tail_light_top_tb is
     constant period_c : time := 20 ns;
 
     signal clock_net    : std_logic;
-    signal clock_slow : std_logic;
-    signal KEY3_net  : std_logic;
-    signal SW_net   : std_logic_vector(2 downto 0);
-    signal lights_net : std_logic_vector(5 downto 0);
+    signal clock_slow   : std_logic;
+    signal KEY3_net     : std_logic;
+    signal SW_net       : std_logic_vector(2 downto 0);
+    signal lights_net   : std_logic_vector(5 downto 0);
 
     component tail_light_top
         port(
@@ -52,11 +52,17 @@ begin
 
     tb_p: process
     begin
+
         SW_net <= (others => '0');
-        KEY3_net <= '1' after 20 ns;
+        wait for 100 ns;
+        KEY3_net <= '1';
+        wait for 20 ns;
         KEY3_net <= '0';
 
-        wait for 500 ns;
+        wait for 100 ns;
+        SW_net <= (0 => '0', 1 => '1', others => '0');
+
+        wait for 400 ns;
 
     assert false
     report "End of TestBench"

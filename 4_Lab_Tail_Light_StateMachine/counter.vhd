@@ -8,7 +8,7 @@ entity counter is
     port(
         clock       : in std_logic;
         RST         : in std_logic;
-        clock_24    : out std_logic
+        clock_slow    : out std_logic
     );
 end counter;
 
@@ -19,6 +19,7 @@ architecture rtl of counter is
 begin
 
     counter_p: process(clock, RST)
+        -- FIX: cannot set to zero right off the gate remove!
         variable count : unsigned(23 downto 0) := (others => '0');
         variable toggle : std_logic := '0';
     begin
@@ -36,7 +37,7 @@ begin
                 end if;
             end if;
         end if;
-        clock_24 <= toggle;
+        clock_slow <= toggle;
         -- 1000000 is represented with 20 bits pick the high bit
     end process;
 
