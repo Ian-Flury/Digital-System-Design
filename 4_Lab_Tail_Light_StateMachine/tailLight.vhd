@@ -38,11 +38,11 @@ begin
             lights <= (others => '0');
         else
 
-        case state is
-            when off => -- lights are off
-            when left =>
-            when right =>
-            when hazard =>
+        case SW is
+            when SW = '000' => -- lights are off
+            when SW = '001' =>
+            when SW = '100' =>
+            when SW = '010' =>
                 
                 -- change lights accordingly.
                 lights_state <= not lights_state;

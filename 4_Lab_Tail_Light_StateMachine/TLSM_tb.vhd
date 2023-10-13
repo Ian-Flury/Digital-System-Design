@@ -60,7 +60,7 @@ begin
         KEY3_net <= '0';
 
         wait for 100 ns;
-        SW_net <= (0 => '0', 1 => '1', others => '0');
+        SW_net <= (0 => '0', 1 => '1', 2 => '0');
 
         wait for 400 ns;
 

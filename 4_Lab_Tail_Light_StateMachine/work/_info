@@ -10,25 +10,25 @@ z2
 cModel Technology
 Z0 dC:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine
 Ecounter
-Z1 w1696381919
+Z1 w1696706512
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 79
+!i122 115
 R0
 Z7 8./counter.vhd
 Z8 F./counter.vhd
 l0
 L7 1
-V?XI6CKRMNh[eF58hT1?jj3
-!s100 6NQh>lHB8=Sm9THncB;l71
+Vc<71Nkm`4SQA=TiTRKbK:3
+!s100 OA;D_ho:;A2_]kAKTzIBP1
 Z9 OV;C;2020.1;71
 33
-Z10 !s110 1696532792
+Z10 !s110 1696991157
 !i10b 1
-Z11 !s108 1696532792.000000
+Z11 !s108 1696991157.000000
 Z12 !s90 -work|work|-2008|-explicit|./counter.vhd|
 Z13 !s107 ./counter.vhd|
 !i113 1
@@ -40,12 +40,12 @@ R3
 R4
 R5
 R6
-DEx4 work 7 counter 0 22 ?XI6CKRMNh[eF58hT1?jj3
-!i122 79
+DEx4 work 7 counter 0 22 c<71Nkm`4SQA=TiTRKbK:3
+!i122 115
 l19
-L15 29
-VDQgXVXZYKYQXda[[XiZ?L0
-!s100 koR3b[NkT:adG8bGA<46]0
+L15 30
+V9zZVocIC0cL?6HG;33Y0J0
+!s100 Kkb0ki2I^@aU2P;AI35TS3
 R9
 33
 R10
@@ -57,13 +57,13 @@ R13
 R14
 R15
 Etail_light_top
-Z16 w1696532675
+Z16 w1696706572
 R2
 R3
 R4
 R5
 R6
-!i122 78
+!i122 114
 R0
 Z17 8./toplevel.vhd
 Z18 F./toplevel.vhd
@@ -73,11 +73,11 @@ Vh9]Oe>z0iMH9::hin]?QB0
 !s100 @MG0TTNXMd]oJ`Pe3bHPS2
 R9
 33
-R10
+Z19 !s110 1696991156
 !i10b 1
-R11
-Z19 !s90 -work|work|-2008|-explicit|./toplevel.vhd|
-Z20 !s107 ./toplevel.vhd|
+Z20 !s108 1696991156.000000
+Z21 !s90 -work|work|-2008|-explicit|./toplevel.vhd|
+Z22 !s107 ./toplevel.vhd|
 !i113 1
 R14
 R15
@@ -88,29 +88,29 @@ R4
 R5
 R6
 DEx4 work 14 tail_light_top 0 22 h9]Oe>z0iMH9::hin]?QB0
-!i122 78
+!i122 114
 l37
 L18 32
-VRT?b?6DZ2KJmm<k0COj[81
-!s100 XA`b2m<?HBima<jFLbTz]0
+VP6dKDFoaN4geD??KBDbl:1
+!s100 Jm55I@Rm`oY8<QC@2PVfB2
 R9
 33
-R10
-!i10b 1
-R11
 R19
+!i10b 1
 R20
+R21
+R22
 !i113 1
 R14
 R15
 Etail_light_top_tb
-Z21 w1696530671
+Z23 w1696991152
 R5
 R6
-!i122 80
+!i122 116
 R0
-Z22 8./TLSM_tb.vhd
-Z23 F./TLSM_tb.vhd
+Z24 8./TLSM_tb.vhd
+Z25 F./TLSM_tb.vhd
 l0
 L11 1
 VQ]^FGj?hkPhik29oT>>GD0
@@ -120,27 +120,27 @@ R9
 R10
 !i10b 1
 R11
-Z24 !s90 -work|work|-2008|-explicit|./TLSM_tb.vhd|
-Z25 !s107 ./TLSM_tb.vhd|
+Z26 !s90 -work|work|-2008|-explicit|./TLSM_tb.vhd|
+Z27 !s107 ./TLSM_tb.vhd|
 !i113 1
 R14
 R15
 Atb
 R5
 R6
-Z26 DEx4 work 17 tail_light_top_tb 0 22 Q]^FGj?hkPhik29oT>>GD0
-!i122 80
+Z28 DEx4 work 17 tail_light_top_tb 0 22 Q]^FGj?hkPhik29oT>>GD0
+!i122 116
 l34
-Z27 L14 53
-Z28 VHn7iKh:@C?fl0bJElK]bR2
-Z29 !s100 =3^Y@HP@Rj:cS<_;e>4?j0
+Z29 L14 59
+VOdF5d?bV<f9ST_DDn?Kci1
+!s100 a1>QZNak>@PBcbDX27n4Q1
 R9
 33
 R10
 !i10b 1
 R11
-R24
-R25
+R26
+R27
 !i113 1
 R14
 R15
