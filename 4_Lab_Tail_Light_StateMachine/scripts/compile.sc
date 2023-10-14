@@ -1,7 +1,8 @@
 #!/bin/bash
 vlib work
 vcom -work work -2008 -explicit "./toplevel.vhd"
- vcom -work work -2008 -explicit "./counter.vhd"
+vcom -work work -2008 -explicit "./tailLight.vhd"
+vcom -work work -2008 -explicit "./counter.vhd"
 vcom -work work -2008 -explicit "./TLSM_tb.vhd" 
 
 # run modelsim simulation and visualize waves 

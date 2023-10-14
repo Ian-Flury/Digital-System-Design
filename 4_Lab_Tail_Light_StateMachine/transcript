@@ -1,6 +1,6 @@
 # Reading pref.tcl
 # vsim -gui -voptargs="+acc" work.tail_light_top_tb -do "./scripts/waves.do" 
-# Start time: 19:26:07 on Oct 10,2023
+# Start time: 15:25:51 on Oct 13,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -10,27 +10,15 @@
 # Loading ieee.numeric_std(body)
 # Loading work.tail_light_top(structural)
 # Loading work.counter(rtl)
-# ** Warning: (vsim-3473) Component instance "tailLight_1 : tailLight" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /tail_light_top_tb/tail_light_top_instance File: ./toplevel.vhd
-# ** Warning: (vsim-8684) No drivers exist on out port /tail_light_top_tb/tail_light_top_instance/lights, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /tail_light_top_tb/lights_net.
+# Loading work.taillight(rtl)
 # do ./scripts/waves.do
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3473) Component instance "tailLight_1 : tailLight" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /tail_light_top_tb/tail_light_top_instance File: ./toplevel.vhd
-# ** Warning: (vsim-8684) No drivers exist on out port /tail_light_top_tb/tail_light_top_instance/lights, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /tail_light_top_tb/lights_net.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ianfl  Hostname: IANS-PC  ProcessID: 28564
-#           Attempting to use alternate WLF file "./wlftdkzmsr".
+#           Attempting to use alternate WLF file "./wlftxq28gx".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftdkzmsr
+#           Using alternate file: ./wlftxq28gx
 # ** Failure: End of TestBench
 #    Time: 620 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
 # Break in Process tb_p at ./TLSM_tb.vhd line 68
 # 0 ps
 # 651 ns
-# End time: 19:30:03 on Oct 10,2023, Elapsed time: 0:03:56
-# Errors: 1, Warnings: 4

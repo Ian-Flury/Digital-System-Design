@@ -23,12 +23,12 @@ end tailLight;
 
 
 architecture rtl of tailLight is 
-    type state_t is (off, left, right, hazard);
+    type state_t is (off, hazard, right_one, right_two, right_three, left_one, left_two, left_three);
     signal state, next_state : state_t;
     signal lights_state : std_logic_vector(5 downto 0); 
 begin
 
-    the_machine: process(SW, state, RST)
+    the_machine: process(switches, state, RST)
         variable l_count : unsigned(2 downto 0);
         variable r_count : unsigned(2 downto 0);
     begin
@@ -38,38 +38,37 @@ begin
             lights <= (others => '0');
         else
 
-        case SW is
-            when SW = '000' => -- lights are off
-            when SW = '001' =>
-            when SW = '100' =>
-            when SW = '010' =>
-                
-                -- change lights accordingly.
+        case state is
+            when off =>
+                lights_state <= (others => '0');
+            when hazard =>
                 lights_state <= not lights_state;
-                
-                -- determine next state.
-                if switches = '000' then
-                    next_state <= off;
-                elsif switches(0) = '1'
-                    next_state <= hazard;
-                elsif switches = '010' then
-                    next_state <= right;
-                else -- switches(2) = '1' and switches(0) = '0' then
-                    next_state <= left;
-                end if;
-
+            when right_one =>
+                lights_state <= "100";
+            when right_two =>
+                lights_state <= "110";
+            when right_three =>
+                lights_state <= "111";
+            when left_one =>
+                lights_state <= "001";
+            when left_two =>
+                lights_state <= "011";
+            when left_three =>
+                lights_state <= "111";
             when others =>
                 -- do nothing
         end case;
         end if;
     end process the_machine;
 
-    -- lights <= lights_state;
+    lights <= lights_state;
 
     the_registers: process(clock_slow, RST)
+    begin
         if RST = '1' then
             state <= off;
         elsif clock_slow'EVENT and clock_slow = '1' then
+            
             state <= next_state;
         end if;
     end process the_registers;
