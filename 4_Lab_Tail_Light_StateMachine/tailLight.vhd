@@ -23,7 +23,7 @@ end tailLight;
 
 
 architecture rtl of tailLight is 
-    type state_t is (off, hazard, right_one, right_two, right_three, left_one, left_two, left_three);
+    type state_t is (off, hazard_zero, hazard_one, right_one, right_two, right_three, left_one, left_two, left_three);
     signal state, next_state : state_t;
     signal lights_state : std_logic_vector(5 downto 0); 
 begin
@@ -34,30 +34,30 @@ begin
     begin
 
         if RST = '1' then
-            next_state <= off;
             lights <= (others => '0');
         else
-
-        case state is
-            when off =>
-                lights_state <= (others => '0');
-            when hazard =>
-                lights_state <= not lights_state;
-            when right_one =>
-                lights_state <= "100";
-            when right_two =>
-                lights_state <= "110";
-            when right_three =>
-                lights_state <= "111";
-            when left_one =>
-                lights_state <= "001";
-            when left_two =>
-                lights_state <= "011";
-            when left_three =>
-                lights_state <= "111";
-            when others =>
-                -- do nothing
-        end case;
+            case state is
+                when off =>
+                    lights_state <= (others => '0');
+                when hazard_zero =>
+                    lights_state <= (others => '0');
+                when hazard_one =>
+                    lights_state <= (others => '1');
+                when right_one =>
+                    lights_state <= "000100";
+                when right_two =>
+                    lights_state <= "000110";
+                when right_three =>
+                    lights_state <= "000111";
+                when left_one =>
+                    lights_state <= "001000";
+                when left_two =>
+                    lights_state <= "011000";
+                when left_three =>
+                    lights_state <= "111000";
+                when others =>
+                    -- do nothing
+            end case;
         end if;
     end process the_machine;
 
@@ -67,8 +67,40 @@ begin
     begin
         if RST = '1' then
             state <= off;
+            next_state <= off;
         elsif clock_slow'EVENT and clock_slow = '1' then
-            
+            if switches = "000" then
+                next_state <= off;
+            elsif switches(0) = '1' then
+                -- hazard
+                if state /= hazard_zero then
+                    next_state <= hazard_zero;
+                else 
+                    next_state <= hazard_one;
+                end if;
+            elsif switches(2) = '1' then
+                -- left signal
+                if state = off then
+                    next_state <= left_one;
+                elsif state = left_one then
+                    next_state <= left_two;
+                elsif state = left_two then
+                    next_state <= left_three;
+                else
+                    next_state <= off;
+                end if;
+            elsif switches(1) = '1' then
+                -- right signals
+                if state = off then
+                    next_state <= right_one;
+                elsif state = right_one then
+                    next_state <= right_two;
+                elsif state = right_two then
+                    next_state <= right_three;
+                else
+                    next_state <= off;
+                end if;
+            end if;
             state <= next_state;
         end if;
     end process the_registers;
