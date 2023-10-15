@@ -1,5 +1,5 @@
 Analysis & Synthesis report for swdbnc
-Tue Oct 03 15:29:01 2023
+Sun Oct 15 10:41:08 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 03 15:29:01 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 15 10:41:08 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; swdbnc                                      ;
 ; Top-level Entity Name              ; swdbnc                                      ;
@@ -174,36 +174,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 117       ;
-;                                             ;           ;
-; Total combinational functions               ; 116       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 23        ;
-;     -- 3 input functions                    ; 47        ;
-;     -- <=2 input functions                  ; 46        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 74        ;
-;     -- arithmetic mode                      ; 42        ;
-;                                             ;           ;
-; Total registers                             ; 52        ;
-;     -- Dedicated logic registers            ; 52        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 4         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; rst_state ;
-; Maximum fan-out                             ; 52        ;
-; Total fan-out                               ; 475       ;
-; Average fan-out                             ; 2.70      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 117           ;
+;                                             ;               ;
+; Total combinational functions               ; 116           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 21            ;
+;     -- 3 input functions                    ; 47            ;
+;     -- <=2 input functions                  ; 48            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 74            ;
+;     -- arithmetic mode                      ; 42            ;
+;                                             ;               ;
+; Total registers                             ; 52            ;
+;     -- Dedicated logic registers            ; 52            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 4             ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; CLK_50M~input ;
+; Maximum fan-out                             ; 52            ;
+; Total fan-out                               ; 471           ;
+; Average fan-out                             ; 2.68          ;
++---------------------------------------------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -255,12 +255,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         2 data inputs ; 42                          ;
 ;     normal            ; 74                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 47                          ;
-;         4 data inputs ; 23                          ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 5.00                        ;
+; Max LUT depth         ; 9.30                        ;
+; Average LUT depth     ; 5.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -269,7 +269,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -279,7 +279,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 03 15:28:52 2023
+    Info: Processing started: Sun Oct 15 10:40:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off swdbnc -c swdbnc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -298,9 +298,9 @@ Info (21057): Implemented 121 device resources after synthesis - the final resou
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 117 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Tue Oct 03 15:29:01 2023
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Sun Oct 15 10:41:08 2023
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:11
 
 

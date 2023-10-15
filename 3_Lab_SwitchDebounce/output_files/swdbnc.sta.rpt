@@ -1,5 +1,5 @@
 Timing Analyzer report for swdbnc
-Tue Oct 03 15:29:22 2023
+Sun Oct 15 10:41:30 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,12 +100,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.6%      ;
+;     Processors 2-8         ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -114,7 +114,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; swdbnc.sdc    ; OK     ; Tue Oct 03 15:29:21 2023 ;
+; swdbnc.sdc    ; OK     ; Sun Oct 15 10:41:29 2023 ;
 +---------------+--------+--------------------------+
 
 
@@ -132,7 +132,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 211.91 MHz ; 211.91 MHz      ; CLK_50M    ;      ;
+; 209.91 MHz ; 209.91 MHz      ; CLK_50M    ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -148,7 +148,7 @@ HTML report is unavailable in plain text report export.
 +---------+--------+------------------+
 ; Clock   ; Slack  ; End Point TNS    ;
 +---------+--------+------------------+
-; CLK_50M ; -3.719 ; -123.176         ;
+; CLK_50M ; -3.764 ; -118.146         ;
 +---------+--------+------------------+
 
 
@@ -187,106 +187,106 @@ No paths to report.
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; -3.719 ; \timer1:count1[1]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 5.052      ;
-; -3.659 ; \timer2_p:count2[3]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.995      ;
-; -3.650 ; \timer2_p:count2[1]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.986      ;
-; -3.634 ; \timer1:count1[0]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.967      ;
-; -3.588 ; \timer1:count1[3]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.921      ;
-; -3.563 ; \timer2_p:count2[3]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.899      ;
-; -3.559 ; \timer2_p:count2[0]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.895      ;
-; -3.554 ; \timer2_p:count2[1]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.890      ;
-; -3.497 ; \timer1:count1[2]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.830      ;
-; -3.463 ; \timer2_p:count2[0]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.799      ;
-; -3.456 ; \timer1:count1[5]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.789      ;
-; -3.429 ; \timer2_p:count2[2]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.765      ;
-; -3.384 ; \timer2_p:count2[5]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.720      ;
-; -3.367 ; \timer1:count1[4]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.700      ;
-; -3.333 ; \timer2_p:count2[2]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.669      ;
-; -3.323 ; \timer1:count1[7]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.656      ;
-; -3.297 ; \timer2_p:count2[4]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.633      ;
-; -3.293 ; \timer2_p:count2[10] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.629      ;
-; -3.288 ; \timer2_p:count2[5]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.624      ;
-; -3.255 ; \timer2_p:count2[7]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.591      ;
-; -3.238 ; \timer1:count1[6]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.571      ;
-; -3.201 ; \timer2_p:count2[4]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.537      ;
-; -3.197 ; \timer2_p:count2[10] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.533      ;
-; -3.191 ; \timer1:count1[9]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.524      ;
-; -3.177 ; \timer2_p:count2[8]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.513      ;
-; -3.169 ; \timer2_p:count2[6]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.505      ;
-; -3.159 ; \timer2_p:count2[7]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.495      ;
-; -3.126 ; \timer2_p:count2[9]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.462      ;
-; -3.118 ; \timer2_p:count2[11] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 4.468      ;
-; -3.105 ; \timer1:count1[8]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.438      ;
-; -3.081 ; \timer2_p:count2[8]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.417      ;
-; -3.073 ; \timer2_p:count2[6]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.409      ;
-; -3.071 ; \timer1:count1[11]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.325      ; 4.394      ;
-; -3.030 ; \timer2_p:count2[9]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.338      ; 4.366      ;
-; -3.022 ; \timer2_p:count2[11] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 4.372      ;
-; -2.991 ; \timer1:count1[15]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.323      ; 4.312      ;
-; -2.973 ; \timer1:count1[10]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.306      ;
-; -2.963 ; \timer1:count1[16]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.107     ; 3.854      ;
-; -2.943 ; \timer1:count1[18]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.107     ; 3.834      ;
-; -2.937 ; \timer1:count1[13]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.325      ; 4.260      ;
-; -2.919 ; \timer1:count1[17]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.107     ; 3.810      ;
-; -2.897 ; \timer1:count1[14]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.323      ; 4.218      ;
-; -2.877 ; \timer2_p:count2[3]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.795      ;
-; -2.868 ; \timer2_p:count2[1]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.786      ;
-; -2.852 ; \timer2_p:count2[15] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.350      ; 4.200      ;
-; -2.851 ; \timer1:count1[12]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.325      ; 4.174      ;
-; -2.849 ; \timer1:count1[1]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 4.192      ;
-; -2.847 ; \timer2_p:count2[13] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 4.197      ;
-; -2.791 ; \timer2_p:count2[0]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.093     ; 3.696      ;
-; -2.777 ; \timer2_p:count2[0]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.695      ;
-; -2.764 ; \timer1:count1[0]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 4.107      ;
-; -2.763 ; \timer2_p:count2[12] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 4.113      ;
-; -2.758 ; \timer2_p:count2[3]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.093     ; 3.663      ;
-; -2.757 ; \timer2_p:count2[3]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.675      ;
-; -2.751 ; \timer2_p:count2[13] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 4.101      ;
-; -2.749 ; \timer2_p:count2[17] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.350      ; 4.097      ;
-; -2.749 ; \timer2_p:count2[1]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.093     ; 3.654      ;
-; -2.748 ; \timer2_p:count2[1]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.666      ;
-; -2.718 ; \timer1:count1[3]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 4.061      ;
-; -2.708 ; \timer2_p:count2[0]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.615      ;
-; -2.705 ; \timer1:count1[1]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.079     ; 3.624      ;
-; -2.693 ; \timer2_p:count2[3]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.600      ;
-; -2.689 ; \timer1:count1[1]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 4.032      ;
-; -2.686 ; \timer2_p:count2[0]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.593      ;
-; -2.684 ; \timer2_p:count2[1]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.591      ;
-; -2.667 ; \timer2_p:count2[12] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 4.017      ;
-; -2.660 ; \timer2_p:count2[2]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.093     ; 3.565      ;
-; -2.657 ; \timer2_p:count2[0]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.575      ;
-; -2.647 ; \timer2_p:count2[2]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.565      ;
-; -2.638 ; \timer2_p:count2[16] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.350      ; 3.986      ;
-; -2.629 ; \timer2_p:count2[14] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.352      ; 3.979      ;
-; -2.627 ; \timer2_p:count2[1]  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.545      ;
-; -2.627 ; \timer1:count1[2]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 3.970      ;
-; -2.620 ; \timer1:count1[0]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.079     ; 3.539      ;
-; -2.617 ; \timer2_p:count2[3]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.524      ;
-; -2.608 ; \timer2_p:count2[1]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.515      ;
-; -2.606 ; \timer2_p:count2[3]  ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.513      ;
-; -2.604 ; \timer1:count1[0]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 3.947      ;
-; -2.602 ; \timer2_p:count2[5]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.080     ; 3.520      ;
-; -2.597 ; \timer2_p:count2[1]  ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.504      ;
-; -2.590 ; \timer2_p:count2[3]  ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.497      ;
-; -2.588 ; \timer1:count1[1]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.079     ; 3.507      ;
-; -2.586 ; \timer1:count1[5]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 3.929      ;
-; -2.581 ; \timer2_p:count2[1]  ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.488      ;
-; -2.578 ; \timer1:count1[0]    ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.345      ; 3.921      ;
-; -2.577 ; \timer1:count1[0]    ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.067     ; 3.508      ;
-; -2.577 ; \timer2_p:count2[2]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.091     ; 3.484      ;
-; -2.575 ; RST                  ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.544     ; 3.029      ;
-; -2.575 ; RST                  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.544     ; 3.029      ;
-; -2.575 ; RST                  ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.544     ; 3.029      ;
-; -2.575 ; RST                  ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.544     ; 3.029      ;
-; -2.575 ; RST                  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[6]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
-; -2.575 ; RST                  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.531     ; 3.042      ;
+; -3.764 ; \timer2_p:count2[0]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 5.095      ;
+; -3.763 ; \timer2_p:count2[0]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 5.094      ;
+; -3.719 ; \timer1:count1[3]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 5.052      ;
+; -3.712 ; \timer1:count1[1]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 5.045      ;
+; -3.690 ; \timer2_p:count2[1]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 5.021      ;
+; -3.689 ; \timer2_p:count2[1]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 5.020      ;
+; -3.652 ; \timer1:count1[0]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.985      ;
+; -3.633 ; \timer2_p:count2[2]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.964      ;
+; -3.632 ; \timer2_p:count2[2]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.963      ;
+; -3.560 ; \timer2_p:count2[3]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.891      ;
+; -3.559 ; \timer2_p:count2[3]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.890      ;
+; -3.500 ; \timer2_p:count2[4]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.831      ;
+; -3.499 ; \timer2_p:count2[4]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.830      ;
+; -3.495 ; \timer1:count1[2]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.828      ;
+; -3.475 ; \timer1:count1[4]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.808      ;
+; -3.429 ; \timer2_p:count2[5]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.760      ;
+; -3.428 ; \timer2_p:count2[5]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.759      ;
+; -3.400 ; \timer1:count1[5]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.733      ;
+; -3.296 ; \timer2_p:count2[7]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.627      ;
+; -3.295 ; \timer2_p:count2[7]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.626      ;
+; -3.277 ; \timer1:count1[9]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.610      ;
+; -3.263 ; \timer1:count1[7]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.596      ;
+; -3.210 ; \timer2_p:count2[6]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.541      ;
+; -3.209 ; \timer2_p:count2[6]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.540      ;
+; -3.208 ; \timer1:count1[8]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.541      ;
+; -3.177 ; \timer1:count1[6]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.510      ;
+; -3.166 ; \timer2_p:count2[9]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.497      ;
+; -3.165 ; \timer2_p:count2[9]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.496      ;
+; -3.081 ; \timer1:count1[15]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.126     ; 3.953      ;
+; -3.074 ; \timer2_p:count2[8]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.405      ;
+; -3.073 ; \timer2_p:count2[8]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.404      ;
+; -3.033 ; \timer2_p:count2[11] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.366      ;
+; -3.032 ; \timer2_p:count2[11] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.365      ;
+; -3.001 ; \timer1:count1[11]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 4.335      ;
+; -2.945 ; \timer2_p:count2[10] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.276      ;
+; -2.944 ; \timer2_p:count2[10] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.333      ; 4.275      ;
+; -2.916 ; \timer1:count1[10]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.249      ;
+; -2.847 ; \timer2_p:count2[15] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 4.181      ;
+; -2.842 ; \timer1:count1[3]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.759      ;
+; -2.835 ; \timer1:count1[1]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.752      ;
+; -2.832 ; \timer2_p:count2[13] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.165      ;
+; -2.752 ; \timer1:count1[13]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 4.086      ;
+; -2.750 ; \timer1:count1[0]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.667      ;
+; -2.748 ; \timer2_p:count2[12] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 4.081      ;
+; -2.742 ; \timer1:count1[3]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.659      ;
+; -2.735 ; \timer1:count1[1]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.652      ;
+; -2.714 ; \timer2_p:count2[17] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 4.048      ;
+; -2.685 ; \timer1:count1[0]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.602      ;
+; -2.678 ; \timer1:count1[0]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.594      ;
+; -2.667 ; \timer2_p:count2[15] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 4.001      ;
+; -2.665 ; \timer1:count1[12]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.999      ;
+; -2.665 ; \timer1:count1[3]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.581      ;
+; -2.658 ; \timer1:count1[1]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.574      ;
+; -2.652 ; \timer2_p:count2[13] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 3.985      ;
+; -2.650 ; \timer2_p:count2[0]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.567      ;
+; -2.650 ; \timer1:count1[0]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.567      ;
+; -2.633 ; \timer1:count1[3]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.550      ;
+; -2.630 ; \timer2_p:count2[16] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.964      ;
+; -2.626 ; \timer1:count1[1]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.543      ;
+; -2.625 ; \timer1:count1[17]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.959      ;
+; -2.618 ; \timer1:count1[2]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.535      ;
+; -2.615 ; \timer2_p:count2[14] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 3.948      ;
+; -2.614 ; \timer2_p:count2[19] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.948      ;
+; -2.605 ; \timer2_p:count2[1]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.522      ;
+; -2.600 ; \timer1:count1[0]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.362      ; 3.960      ;
+; -2.596 ; \timer1:count1[4]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.513      ;
+; -2.589 ; \timer1:count1[4]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.505      ;
+; -2.583 ; \timer1:count1[3]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.499      ;
+; -2.581 ; \timer2_p:count2[0]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.495      ;
+; -2.576 ; \timer1:count1[1]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.492      ;
+; -2.575 ; \timer2_p:count2[1]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.492      ;
+; -2.572 ; \timer1:count1[3]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.362      ; 3.932      ;
+; -2.568 ; \timer2_p:count2[12] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.335      ; 3.901      ;
+; -2.565 ; \timer1:count1[1]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.362      ; 3.925      ;
+; -2.554 ; \timer1:count1[2]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.471      ;
+; -2.550 ; \timer2_p:count2[1]  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.467      ;
+; -2.547 ; \timer2_p:count2[0]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.461      ;
+; -2.547 ; \timer1:count1[2]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.463      ;
+; -2.543 ; \timer1:count1[16]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.877      ;
+; -2.534 ; \timer2_p:count2[17] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.868      ;
+; -2.532 ; \timer1:count1[14]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.866      ;
+; -2.532 ; \timer1:count1[4]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.449      ;
+; -2.526 ; \timer2_p:count2[1]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.440      ;
+; -2.521 ; \timer2_p:count2[0]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.438      ;
+; -2.519 ; \timer2_p:count2[2]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.436      ;
+; -2.518 ; \timer1:count1[2]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.435      ;
+; -2.518 ; \timer2_p:count2[1]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.432      ;
+; -2.512 ; \timer2_p:count2[1]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.429      ;
+; -2.511 ; \timer1:count1[4]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.362      ; 3.871      ;
+; -2.502 ; \timer1:count1[3]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.419      ;
+; -2.495 ; \timer1:count1[1]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.412      ;
+; -2.494 ; \timer2_p:count2[18] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.828      ;
+; -2.491 ; \timer1:count1[0]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.407      ;
+; -2.475 ; \timer2_p:count2[3]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.392      ;
+; -2.473 ; \timer1:count1[5]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.390      ;
+; -2.469 ; \timer1:count1[2]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.362      ; 3.829      ;
+; -2.466 ; \timer2_p:count2[0]  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.081     ; 3.383      ;
+; -2.453 ; \timer1:count1[0]    ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.369      ;
+; -2.450 ; \timer2_p:count2[16] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.336      ; 3.784      ;
+; -2.450 ; \timer2_p:count2[2]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.364      ;
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -295,106 +295,106 @@ No paths to report.
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; 0.385 ; ENAB1                ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 0.669      ;
-; 0.386 ; led_flag_off         ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.097      ; 0.669      ;
-; 0.386 ; ENAB2                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.097      ; 0.669      ;
-; 0.408 ; rst_state            ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 0.674      ;
-; 0.517 ; RST                  ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 0.801      ;
-; 0.695 ; prev_state           ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 0.979      ;
-; 0.812 ; rst_state            ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.513      ; 1.511      ;
-; 0.891 ; rst_state            ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.155      ;
-; 0.892 ; rst_state            ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.156      ;
-; 0.930 ; rst_state            ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.529      ; 1.645      ;
-; 0.980 ; RST                  ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.363     ; 0.803      ;
-; 0.981 ; RST                  ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.363     ; 0.804      ;
-; 0.993 ; \timer2_p:count2[14] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.258      ;
-; 0.994 ; \timer2_p:count2[9]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.260      ;
-; 0.995 ; \timer2_p:count2[12] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.260      ;
-; 0.999 ; \timer1:count1[12]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.264      ;
-; 1.004 ; \timer2_p:count2[1]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.270      ;
-; 1.005 ; \timer1:count1[1]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.270      ;
-; 1.010 ; \timer1:count1[4]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.275      ;
-; 1.064 ; rst_state            ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.513      ; 1.763      ;
-; 1.101 ; LED_FLAG             ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.336     ; 0.951      ;
-; 1.115 ; led_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 1.399      ;
-; 1.126 ; rst_state            ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.064      ; 1.376      ;
-; 1.126 ; rst_state            ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.064      ; 1.376      ;
-; 1.129 ; \timer1:count1[21]   ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.394      ;
-; 1.133 ; \timer1:count1[2]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.398      ;
-; 1.168 ; \timer2_p:count2[13] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.433      ;
-; 1.194 ; rst_state            ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.446      ;
-; 1.222 ; RST                  ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.363     ; 1.045      ;
-; 1.223 ; RST                  ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.363     ; 1.046      ;
-; 1.233 ; RST                  ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.363     ; 1.056      ;
-; 1.236 ; rst_state            ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.488      ;
-; 1.236 ; rst_state            ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.488      ;
-; 1.238 ; rst_state            ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.064      ; 1.488      ;
-; 1.241 ; \timer2_p:count2[21] ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.506      ;
-; 1.277 ; rst_state            ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.488      ; 1.951      ;
-; 1.285 ; rst_state            ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.537      ;
-; 1.285 ; rst_state            ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.537      ;
-; 1.285 ; rst_state            ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.537      ;
-; 1.285 ; rst_state            ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.537      ;
-; 1.285 ; rst_state            ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.537      ;
-; 1.289 ; rst_state            ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.553      ;
-; 1.290 ; \timer1:count1[13]   ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.555      ;
-; 1.311 ; \timer2_p:count2[13] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.576      ;
-; 1.311 ; \timer1:count1[11]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.576      ;
-; 1.313 ; \timer1:count1[11]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.578      ;
-; 1.314 ; \timer1:count1[10]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.089      ; 1.589      ;
-; 1.315 ; \timer1:count1[20]   ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.580      ;
-; 1.324 ; \timer1:count1[3]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.589      ;
-; 1.324 ; \timer1:count1[0]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.589      ;
-; 1.326 ; \timer2_p:count2[0]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.592      ;
-; 1.326 ; \timer2_p:count2[12] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.591      ;
-; 1.341 ; \timer1:count1[2]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.606      ;
-; 1.350 ; rst_state            ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.068      ; 1.604      ;
-; 1.351 ; rst_state            ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.068      ; 1.605      ;
-; 1.353 ; rst_state            ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.068      ; 1.607      ;
-; 1.356 ; RST                  ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.365     ; 1.177      ;
-; 1.356 ; RST                  ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.365     ; 1.177      ;
-; 1.362 ; \timer1:count1[15]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.627      ;
-; 1.363 ; rst_state            ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.627      ;
-; 1.367 ; rst_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.529      ; 2.082      ;
-; 1.369 ; RST                  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.637      ;
-; 1.385 ; \timer2_p:count2[20] ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.650      ;
-; 1.426 ; \timer1:count1[9]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.089      ; 1.701      ;
-; 1.429 ; \timer2_p:count2[7]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.695      ;
-; 1.431 ; \timer2_p:count2[21] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.526      ; 2.143      ;
-; 1.441 ; \timer1:count1[8]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.089      ; 1.716      ;
-; 1.443 ; \timer2_p:count2[16] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.708      ;
-; 1.443 ; \timer2_p:count2[6]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.709      ;
-; 1.445 ; rst_state            ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.709      ;
-; 1.447 ; \timer1:count1[1]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.712      ;
-; 1.449 ; \timer1:count1[1]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.714      ;
-; 1.451 ; \timer2_p:count2[9]  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.703      ;
-; 1.462 ; \timer1:count1[0]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.727      ;
-; 1.464 ; \timer1:count1[0]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.729      ;
-; 1.468 ; \timer2_p:count2[11] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.733      ;
-; 1.470 ; \timer2_p:count2[12] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.735      ;
-; 1.473 ; RST                  ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.067      ; 1.726      ;
-; 1.482 ; \timer2_p:count2[8]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.748      ;
-; 1.483 ; RST                  ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.067      ; 1.736      ;
-; 1.488 ; \timer2_p:count2[15] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.753      ;
-; 1.498 ; \timer1:count1[14]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.763      ;
-; 1.504 ; rst_state            ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.768      ;
-; 1.508 ; RST                  ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.067      ; 1.761      ;
-; 1.510 ; rst_state            ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.068      ; 1.764      ;
-; 1.510 ; rst_state            ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.068      ; 1.764      ;
-; 1.516 ; ENAB1                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.057      ; 1.759      ;
-; 1.525 ; \timer2_p:count2[17] ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.790      ;
-; 1.528 ; \timer2_p:count2[18] ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.793      ;
-; 1.531 ; rst_state            ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.783      ;
-; 1.531 ; rst_state            ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.783      ;
-; 1.534 ; \timer1:count1[19]   ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.799      ;
-; 1.534 ; \timer2_p:count2[19] ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.799      ;
-; 1.552 ; \timer1:count1[7]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.089      ; 1.827      ;
-; 1.554 ; \timer2_p:count2[5]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.820      ;
-; 1.566 ; \timer1:count1[13]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.833      ;
-; 1.567 ; \timer1:count1[6]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.089      ; 1.842      ;
-; 1.570 ; led_flag_off         ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.097      ; 1.853      ;
-; 1.573 ; \timer2_p:count2[4]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.839      ;
-; 1.575 ; \timer2_p:count2[7]  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.066      ; 1.827      ;
+; 0.385 ; LED_FLAG             ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 0.669      ;
+; 0.385 ; ENAB2                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 0.669      ;
+; 0.402 ; ENAB1                ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.669      ;
+; 0.407 ; rst_state            ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.674      ;
+; 0.430 ; prev_state           ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.697      ;
+; 0.479 ; RST                  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.746      ;
+; 0.718 ; rst_state            ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.985      ;
+; 0.726 ; RST                  ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.993      ;
+; 0.727 ; RST                  ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.994      ;
+; 0.731 ; RST                  ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 0.998      ;
+; 0.734 ; RST                  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.001      ;
+; 0.735 ; RST                  ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.002      ;
+; 0.867 ; rst_state            ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.133      ;
+; 0.919 ; ENAB1                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.520      ; 1.625      ;
+; 0.938 ; RST                  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.084      ; 1.208      ;
+; 0.939 ; RST                  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.084      ; 1.209      ;
+; 0.940 ; RST                  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.084      ; 1.210      ;
+; 0.950 ; rst_state            ; \timer1:count1[5]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.087      ; 1.223      ;
+; 0.950 ; rst_state            ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.087      ; 1.223      ;
+; 0.950 ; rst_state            ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.087      ; 1.223      ;
+; 0.975 ; RST                  ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.085      ; 1.246      ;
+; 1.003 ; \timer2_p:count2[20] ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.270      ;
+; 1.003 ; \timer1:count1[20]   ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.270      ;
+; 1.005 ; \timer1:count1[11]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.272      ;
+; 1.006 ; \timer2_p:count2[14] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.273      ;
+; 1.008 ; \timer2_p:count2[12] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.275      ;
+; 1.009 ; \timer2_p:count2[11] ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.276      ;
+; 1.009 ; \timer1:count1[14]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.276      ;
+; 1.011 ; \timer1:count1[12]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.278      ;
+; 1.068 ; RST                  ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.336      ;
+; 1.070 ; RST                  ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.338      ;
+; 1.072 ; RST                  ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.340      ;
+; 1.072 ; RST                  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.340      ;
+; 1.073 ; RST                  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.341      ;
+; 1.092 ; RST                  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.515      ; 1.793      ;
+; 1.104 ; rst_state            ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.370      ;
+; 1.127 ; \timer2_p:count2[21] ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.394      ;
+; 1.128 ; \timer2_p:count2[2]  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.395      ;
+; 1.131 ; \timer1:count1[13]   ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.398      ;
+; 1.146 ; rst_state            ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.412      ;
+; 1.150 ; led_flag_off         ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 1.434      ;
+; 1.173 ; RST                  ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.449      ;
+; 1.177 ; rst_state            ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.443      ;
+; 1.177 ; rst_state            ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.443      ;
+; 1.178 ; RST                  ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.454      ;
+; 1.179 ; RST                  ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.455      ;
+; 1.180 ; RST                  ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.456      ;
+; 1.181 ; RST                  ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.457      ;
+; 1.193 ; rst_state            ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.078      ; 1.457      ;
+; 1.199 ; RST                  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.084      ; 1.469      ;
+; 1.208 ; rst_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.475      ;
+; 1.209 ; RST                  ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.085      ; 1.480      ;
+; 1.248 ; \timer1:count1[21]   ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.515      ;
+; 1.252 ; \timer1:count1[1]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.519      ;
+; 1.258 ; RST                  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.515      ; 1.959      ;
+; 1.259 ; \timer1:count1[5]    ; \timer1:count1[5]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.526      ;
+; 1.266 ; led_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.533      ;
+; 1.269 ; \timer2_p:count2[1]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.536      ;
+; 1.270 ; RST                  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.084      ; 1.540      ;
+; 1.272 ; \timer2_p:count2[13] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.539      ;
+; 1.273 ; \timer2_p:count2[9]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.540      ;
+; 1.273 ; \timer2_p:count2[5]  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.540      ;
+; 1.291 ; LED_FLAG             ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.332     ; 1.145      ;
+; 1.297 ; rst_state            ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.563      ;
+; 1.298 ; led_flag_off         ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.098      ; 1.582      ;
+; 1.299 ; \timer2_p:count2[15] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.566      ;
+; 1.300 ; rst_state            ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.566      ;
+; 1.305 ; rst_state            ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.568      ;
+; 1.305 ; rst_state            ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.568      ;
+; 1.306 ; rst_state            ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.569      ;
+; 1.308 ; rst_state            ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.571      ;
+; 1.308 ; rst_state            ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.571      ;
+; 1.310 ; \timer2_p:count2[18] ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.577      ;
+; 1.323 ; \timer2_p:count2[13] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.590      ;
+; 1.323 ; \timer1:count1[13]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.590      ;
+; 1.324 ; \timer1:count1[11]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.591      ;
+; 1.324 ; \timer1:count1[10]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.590      ;
+; 1.325 ; \timer2_p:count2[17] ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.592      ;
+; 1.326 ; \timer2_p:count2[11] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.593      ;
+; 1.327 ; \timer2_p:count2[10] ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.592      ;
+; 1.335 ; \timer2_p:count2[16] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.602      ;
+; 1.337 ; \timer1:count1[10]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.603      ;
+; 1.338 ; \timer2_p:count2[10] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.603      ;
+; 1.339 ; \timer2_p:count2[12] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.606      ;
+; 1.342 ; \timer1:count1[12]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.609      ;
+; 1.348 ; \timer1:count1[19]   ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.615      ;
+; 1.349 ; \timer2_p:count2[3]  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.616      ;
+; 1.352 ; RST                  ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.091      ; 1.629      ;
+; 1.353 ; RST                  ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.091      ; 1.630      ;
+; 1.382 ; rst_state            ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.511      ; 2.079      ;
+; 1.403 ; rst_state            ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.086      ; 1.675      ;
+; 1.403 ; rst_state            ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.086      ; 1.675      ;
+; 1.403 ; rst_state            ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.086      ; 1.675      ;
+; 1.403 ; rst_state            ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.086      ; 1.675      ;
+; 1.415 ; RST                  ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.691      ;
+; 1.416 ; RST                  ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.692      ;
+; 1.416 ; RST                  ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.692      ;
+; 1.417 ; RST                  ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.693      ;
+; 1.417 ; RST                  ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.090      ; 1.693      ;
+; 1.418 ; RST                  ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.552      ; 2.156      ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -409,7 +409,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 233.26 MHz ; 233.26 MHz      ; CLK_50M    ;      ;
+; 228.73 MHz ; 228.73 MHz      ; CLK_50M    ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -419,7 +419,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+-----------------+
 ; Clock   ; Slack  ; End Point TNS   ;
 +---------+--------+-----------------+
-; CLK_50M ; -3.287 ; -108.254        ;
+; CLK_50M ; -3.372 ; -102.955        ;
 +---------+--------+-----------------+
 
 
@@ -458,106 +458,106 @@ No paths to report.
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; -3.287 ; \timer1:count1[1]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.597      ;
-; -3.213 ; \timer1:count1[0]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.523      ;
-; -3.211 ; \timer2_p:count2[3]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.524      ;
-; -3.208 ; \timer2_p:count2[1]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.521      ;
-; -3.172 ; \timer1:count1[3]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.482      ;
-; -3.128 ; \timer2_p:count2[0]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.441      ;
-; -3.118 ; \timer2_p:count2[3]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.431      ;
-; -3.115 ; \timer2_p:count2[1]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.428      ;
-; -3.092 ; \timer1:count1[2]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.402      ;
-; -3.055 ; \timer1:count1[5]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.365      ;
-; -3.035 ; \timer2_p:count2[0]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.348      ;
-; -3.014 ; \timer2_p:count2[2]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.327      ;
-; -2.977 ; \timer1:count1[4]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.287      ;
-; -2.973 ; \timer2_p:count2[5]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.286      ;
-; -2.940 ; \timer2_p:count2[10] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.253      ;
-; -2.939 ; \timer1:count1[7]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.249      ;
-; -2.921 ; \timer2_p:count2[2]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.234      ;
-; -2.898 ; \timer2_p:count2[4]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.211      ;
-; -2.880 ; \timer2_p:count2[5]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.193      ;
-; -2.865 ; \timer1:count1[6]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.175      ;
-; -2.861 ; \timer2_p:count2[10] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.174      ;
-; -2.860 ; \timer2_p:count2[7]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.173      ;
-; -2.823 ; \timer1:count1[9]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.133      ;
-; -2.814 ; \timer2_p:count2[8]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.127      ;
-; -2.805 ; \timer2_p:count2[4]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.118      ;
-; -2.786 ; \timer2_p:count2[6]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.099      ;
-; -2.767 ; \timer2_p:count2[7]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.080      ;
-; -2.748 ; \timer1:count1[8]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 4.058      ;
-; -2.747 ; \timer2_p:count2[9]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.060      ;
-; -2.736 ; \timer2_p:count2[11] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 4.062      ;
-; -2.735 ; \timer2_p:count2[8]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.048      ;
-; -2.718 ; \timer1:count1[11]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.301      ; 4.018      ;
-; -2.693 ; \timer2_p:count2[6]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 4.006      ;
-; -2.654 ; \timer2_p:count2[9]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.314      ; 3.967      ;
-; -2.643 ; \timer1:count1[15]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.299      ; 3.941      ;
-; -2.643 ; \timer2_p:count2[11] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 3.969      ;
-; -2.635 ; \timer1:count1[16]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.097     ; 3.537      ;
-; -2.632 ; \timer1:count1[10]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.311      ; 3.942      ;
-; -2.627 ; \timer1:count1[18]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.097     ; 3.529      ;
-; -2.600 ; \timer1:count1[13]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.301      ; 3.900      ;
-; -2.583 ; \timer1:count1[17]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.097     ; 3.485      ;
-; -2.566 ; \timer1:count1[14]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.299      ; 3.864      ;
-; -2.529 ; \timer2_p:count2[3]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.457      ;
-; -2.526 ; \timer1:count1[12]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.301      ; 3.826      ;
-; -2.526 ; \timer2_p:count2[1]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.454      ;
-; -2.504 ; \timer2_p:count2[15] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.325      ; 3.828      ;
-; -2.502 ; \timer2_p:count2[13] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 3.828      ;
-; -2.484 ; \timer1:count1[1]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.322      ; 3.805      ;
-; -2.455 ; \timer2_p:count2[0]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.370      ;
-; -2.446 ; \timer2_p:count2[0]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.374      ;
-; -2.429 ; \timer2_p:count2[12] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 3.755      ;
-; -2.413 ; \timer2_p:count2[17] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.325      ; 3.737      ;
-; -2.410 ; \timer1:count1[0]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.322      ; 3.731      ;
-; -2.409 ; \timer2_p:count2[13] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 3.735      ;
-; -2.381 ; \timer2_p:count2[3]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.309      ;
-; -2.379 ; \timer1:count1[1]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.070     ; 3.308      ;
-; -2.379 ; \timer2_p:count2[3]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.294      ;
-; -2.378 ; \timer2_p:count2[1]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.306      ;
-; -2.376 ; \timer2_p:count2[1]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.291      ;
-; -2.369 ; \timer1:count1[3]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.322      ; 3.690      ;
-; -2.340 ; \timer2_p:count2[2]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.084     ; 3.255      ;
-; -2.339 ; \timer2_p:count2[0]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.256      ;
-; -2.339 ; \timer2_p:count2[16] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.325      ; 3.663      ;
-; -2.336 ; \timer2_p:count2[12] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 3.662      ;
-; -2.334 ; \timer2_p:count2[0]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.082     ; 3.251      ;
-; -2.333 ; ENAB2                ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.460     ; 2.872      ;
-; -2.333 ; ENAB2                ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.460     ; 2.872      ;
-; -2.333 ; ENAB2                ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.460     ; 2.872      ;
-; -2.333 ; ENAB2                ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.460     ; 2.872      ;
-; -2.332 ; \timer2_p:count2[2]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.260      ;
-; -2.331 ; RST                  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.500     ; 2.830      ;
-; -2.331 ; RST                  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.500     ; 2.830      ;
-; -2.331 ; RST                  ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.500     ; 2.830      ;
-; -2.331 ; RST                  ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.500     ; 2.830      ;
-; -2.326 ; \timer1:count1[1]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.322      ; 3.647      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[6]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; \timer2_p:count2[1]  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.071     ; 3.253      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.325 ; ENAB2                ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.447     ; 2.877      ;
-; -2.323 ; RST                  ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[6]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.323 ; RST                  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.487     ; 2.835      ;
-; -2.311 ; \timer2_p:count2[14] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.327      ; 3.637      ;
-; -2.305 ; \timer1:count1[0]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.070     ; 3.234      ;
+; -3.372 ; \timer2_p:count2[0]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.676      ;
+; -3.372 ; \timer2_p:count2[0]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.676      ;
+; -3.322 ; \timer1:count1[3]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.628      ;
+; -3.320 ; \timer1:count1[1]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.626      ;
+; -3.295 ; \timer2_p:count2[1]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.599      ;
+; -3.295 ; \timer2_p:count2[1]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.599      ;
+; -3.278 ; \timer1:count1[0]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.584      ;
+; -3.256 ; \timer2_p:count2[2]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.560      ;
+; -3.256 ; \timer2_p:count2[2]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.560      ;
+; -3.181 ; \timer2_p:count2[3]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.485      ;
+; -3.181 ; \timer2_p:count2[3]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.485      ;
+; -3.139 ; \timer2_p:count2[4]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.443      ;
+; -3.139 ; \timer2_p:count2[4]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.443      ;
+; -3.130 ; \timer1:count1[2]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.436      ;
+; -3.118 ; \timer1:count1[4]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.424      ;
+; -3.042 ; \timer2_p:count2[5]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.346      ;
+; -3.042 ; \timer2_p:count2[5]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.346      ;
+; -3.018 ; \timer1:count1[5]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.324      ;
+; -2.924 ; \timer2_p:count2[7]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.228      ;
+; -2.924 ; \timer2_p:count2[7]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.228      ;
+; -2.904 ; \timer1:count1[9]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.210      ;
+; -2.896 ; \timer1:count1[7]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.202      ;
+; -2.882 ; \timer1:count1[8]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.188      ;
+; -2.850 ; \timer2_p:count2[6]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.154      ;
+; -2.850 ; \timer2_p:count2[6]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.154      ;
+; -2.834 ; \timer1:count1[6]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.140      ;
+; -2.811 ; \timer2_p:count2[9]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.115      ;
+; -2.811 ; \timer2_p:count2[9]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.115      ;
+; -2.730 ; \timer2_p:count2[8]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.034      ;
+; -2.730 ; \timer2_p:count2[8]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 4.034      ;
+; -2.729 ; \timer1:count1[15]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.116     ; 3.612      ;
+; -2.694 ; \timer2_p:count2[11] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.000      ;
+; -2.694 ; \timer2_p:count2[11] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 4.000      ;
+; -2.666 ; \timer1:count1[11]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.309      ; 3.974      ;
+; -2.617 ; \timer2_p:count2[10] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 3.921      ;
+; -2.617 ; \timer2_p:count2[10] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.305      ; 3.921      ;
+; -2.596 ; \timer1:count1[10]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 3.902      ;
+; -2.508 ; \timer1:count1[3]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.434      ;
+; -2.506 ; \timer1:count1[1]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.432      ;
+; -2.433 ; \timer2_p:count2[15] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.740      ;
+; -2.432 ; \timer1:count1[0]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.358      ;
+; -2.426 ; \timer2_p:count2[13] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 3.732      ;
+; -2.420 ; \timer1:count1[13]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.309      ; 3.728      ;
+; -2.394 ; \timer1:count1[3]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.320      ;
+; -2.392 ; \timer1:count1[1]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.318      ;
+; -2.379 ; \timer1:count1[0]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.305      ;
+; -2.358 ; \timer2_p:count2[12] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 3.664      ;
+; -2.351 ; \timer1:count1[12]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.309      ; 3.659      ;
+; -2.336 ; \timer2_p:count2[0]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.262      ;
+; -2.333 ; \timer2_p:count2[13] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 3.639      ;
+; -2.319 ; \timer1:count1[4]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.245      ;
+; -2.318 ; \timer1:count1[0]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.244      ;
+; -2.317 ; \timer2_p:count2[17] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.624      ;
+; -2.316 ; \timer1:count1[2]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.242      ;
+; -2.310 ; \timer1:count1[0]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.236      ;
+; -2.308 ; \timer1:count1[17]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.615      ;
+; -2.305 ; \timer1:count1[3]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.231      ;
+; -2.303 ; \timer1:count1[1]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.229      ;
+; -2.301 ; \timer2_p:count2[15] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.608      ;
+; -2.297 ; \timer2_p:count2[16] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.604      ;
+; -2.276 ; \timer2_p:count2[1]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.202      ;
+; -2.269 ; \timer1:count1[0]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.334      ; 3.602      ;
+; -2.263 ; \timer1:count1[2]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.189      ;
+; -2.261 ; \timer2_p:count2[12] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 3.567      ;
+; -2.259 ; \timer2_p:count2[1]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.185      ;
+; -2.250 ; \timer1:count1[4]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.176      ;
+; -2.246 ; \timer1:count1[3]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.172      ;
+; -2.244 ; \timer1:count1[1]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.170      ;
+; -2.243 ; \timer2_p:count2[1]  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.169      ;
+; -2.241 ; \timer2_p:count2[14] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.307      ; 3.547      ;
+; -2.237 ; \timer1:count1[16]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.544      ;
+; -2.234 ; \timer1:count1[14]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.309      ; 3.542      ;
+; -2.228 ; \timer2_p:count2[19] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.535      ;
+; -2.224 ; \timer2_p:count2[0]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.075     ; 3.148      ;
+; -2.220 ; \timer1:count1[3]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.146      ;
+; -2.220 ; \timer2_p:count2[2]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.146      ;
+; -2.218 ; \timer1:count1[1]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.144      ;
+; -2.211 ; \timer1:count1[4]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.137      ;
+; -2.209 ; \timer1:count1[4]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.334      ; 3.542      ;
+; -2.203 ; \timer2_p:count2[0]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.129      ;
+; -2.202 ; \timer1:count1[2]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.128      ;
+; -2.197 ; \timer2_p:count2[0]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.075     ; 3.121      ;
+; -2.195 ; \timer1:count1[3]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.334      ; 3.528      ;
+; -2.194 ; \timer1:count1[2]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.120      ;
+; -2.193 ; \timer2_p:count2[1]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.119      ;
+; -2.193 ; \timer1:count1[1]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.334      ; 3.526      ;
+; -2.185 ; \timer2_p:count2[17] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.492      ;
+; -2.181 ; \timer1:count1[3]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.107      ;
+; -2.179 ; \timer1:count1[1]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.105      ;
+; -2.178 ; \timer2_p:count2[18] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.485      ;
+; -2.170 ; \timer2_p:count2[0]  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.096      ;
+; -2.165 ; \timer2_p:count2[16] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.308      ; 3.472      ;
+; -2.162 ; \timer1:count1[5]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.088      ;
+; -2.162 ; \timer2_p:count2[3]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.088      ;
+; -2.153 ; \timer1:count1[2]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.334      ; 3.486      ;
+; -2.147 ; \timer2_p:count2[1]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.075     ; 3.071      ;
+; -2.145 ; \timer2_p:count2[3]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.071      ;
+; -2.144 ; \timer1:count1[0]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.070      ;
+; -2.142 ; \timer1:count1[0]    ; \timer1:count1[9]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.068      ;
+; -2.129 ; \timer2_p:count2[3]  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.073     ; 3.055      ;
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -566,106 +566,106 @@ No paths to report.
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; 0.338 ; ENAB1                ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 0.597      ;
-; 0.339 ; led_flag_off         ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.087      ; 0.597      ;
-; 0.340 ; ENAB2                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.086      ; 0.597      ;
-; 0.366 ; rst_state            ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 0.608      ;
-; 0.465 ; RST                  ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 0.724      ;
-; 0.637 ; prev_state           ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 0.896      ;
-; 0.732 ; rst_state            ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.470      ; 1.373      ;
-; 0.824 ; rst_state            ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.064      ;
-; 0.824 ; rst_state            ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.064      ;
-; 0.833 ; rst_state            ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.485      ; 1.489      ;
-; 0.892 ; RST                  ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.337     ; 0.726      ;
-; 0.894 ; RST                  ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.337     ; 0.728      ;
-; 0.912 ; \timer2_p:count2[14] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.154      ;
-; 0.913 ; \timer2_p:count2[12] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.155      ;
-; 0.915 ; \timer2_p:count2[9]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.157      ;
-; 0.917 ; \timer1:count1[12]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.159      ;
-; 0.924 ; \timer1:count1[1]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.165      ;
-; 0.924 ; \timer2_p:count2[1]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.166      ;
-; 0.930 ; \timer1:count1[4]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.171      ;
-; 0.953 ; rst_state            ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.470      ; 1.594      ;
-; 1.014 ; LED_FLAG             ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.312     ; 0.873      ;
-; 1.021 ; led_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 1.280      ;
-; 1.028 ; \timer1:count1[21]   ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.270      ;
-; 1.039 ; \timer1:count1[2]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.280      ;
-; 1.039 ; rst_state            ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.056      ; 1.266      ;
-; 1.039 ; rst_state            ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.056      ; 1.266      ;
-; 1.057 ; \timer2_p:count2[13] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.299      ;
-; 1.105 ; rst_state            ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.334      ;
-; 1.114 ; RST                  ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.337     ; 0.948      ;
-; 1.115 ; RST                  ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.337     ; 0.949      ;
-; 1.125 ; RST                  ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.337     ; 0.959      ;
-; 1.126 ; \timer2_p:count2[21] ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.368      ;
-; 1.144 ; rst_state            ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.373      ;
-; 1.145 ; rst_state            ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.374      ;
-; 1.145 ; rst_state            ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.445      ; 1.761      ;
-; 1.145 ; rst_state            ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.056      ; 1.372      ;
-; 1.170 ; rst_state            ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.410      ;
-; 1.189 ; rst_state            ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.418      ;
-; 1.189 ; rst_state            ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.418      ;
-; 1.189 ; rst_state            ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.418      ;
-; 1.189 ; rst_state            ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.418      ;
-; 1.189 ; rst_state            ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.418      ;
-; 1.191 ; \timer1:count1[13]   ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.433      ;
-; 1.195 ; \timer1:count1[0]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.436      ;
-; 1.198 ; \timer2_p:count2[0]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.440      ;
-; 1.199 ; \timer1:count1[11]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.441      ;
-; 1.199 ; \timer1:count1[10]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.450      ;
-; 1.201 ; \timer1:count1[20]   ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.443      ;
-; 1.202 ; \timer2_p:count2[13] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.444      ;
-; 1.207 ; \timer1:count1[11]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.449      ;
-; 1.212 ; \timer2_p:count2[12] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.454      ;
-; 1.214 ; \timer1:count1[3]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.455      ;
-; 1.224 ; \timer1:count1[15]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.466      ;
-; 1.227 ; \timer1:count1[2]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.468      ;
-; 1.231 ; RST                  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.475      ;
-; 1.238 ; rst_state            ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.060      ; 1.469      ;
-; 1.239 ; rst_state            ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.060      ; 1.470      ;
-; 1.241 ; rst_state            ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.060      ; 1.472      ;
-; 1.244 ; \timer2_p:count2[20] ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.486      ;
-; 1.246 ; rst_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.485      ; 1.902      ;
-; 1.248 ; rst_state            ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.488      ;
-; 1.258 ; RST                  ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.339     ; 1.090      ;
-; 1.258 ; RST                  ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.339     ; 1.090      ;
-; 1.283 ; \timer2_p:count2[21] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.483      ; 1.937      ;
-; 1.287 ; \timer2_p:count2[7]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.529      ;
-; 1.296 ; \timer2_p:count2[6]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.538      ;
-; 1.301 ; \timer1:count1[9]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.552      ;
-; 1.310 ; \timer1:count1[8]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.561      ;
-; 1.317 ; rst_state            ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.557      ;
-; 1.320 ; \timer2_p:count2[12] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.562      ;
-; 1.323 ; \timer1:count1[1]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.564      ;
-; 1.324 ; \timer1:count1[1]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.565      ;
-; 1.325 ; \timer2_p:count2[9]  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.554      ;
-; 1.333 ; \timer1:count1[0]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.574      ;
-; 1.334 ; \timer1:count1[0]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.575      ;
-; 1.335 ; \timer2_p:count2[16] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.577      ;
-; 1.336 ; RST                  ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.059      ; 1.566      ;
-; 1.344 ; \timer2_p:count2[8]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.586      ;
-; 1.346 ; RST                  ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.059      ; 1.576      ;
-; 1.353 ; \timer2_p:count2[11] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.595      ;
-; 1.357 ; \timer1:count1[14]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.599      ;
-; 1.366 ; RST                  ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.059      ; 1.596      ;
-; 1.366 ; \timer2_p:count2[15] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.608      ;
-; 1.367 ; rst_state            ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.607      ;
-; 1.377 ; ENAB1                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.048      ; 1.596      ;
-; 1.386 ; rst_state            ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.060      ; 1.617      ;
-; 1.387 ; \timer2_p:count2[19] ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.629      ;
-; 1.387 ; rst_state            ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.060      ; 1.618      ;
-; 1.391 ; \timer2_p:count2[18] ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.633      ;
-; 1.391 ; \timer2_p:count2[17] ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.633      ;
-; 1.393 ; \timer2_p:count2[5]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.635      ;
-; 1.402 ; rst_state            ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.631      ;
-; 1.402 ; rst_state            ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.058      ; 1.631      ;
-; 1.403 ; \timer1:count1[13]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.647      ;
-; 1.408 ; \timer1:count1[19]   ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.650      ;
-; 1.410 ; \timer1:count1[7]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.661      ;
-; 1.411 ; \timer2_p:count2[4]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.653      ;
-; 1.415 ; led_flag_off         ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.087      ; 1.673      ;
-; 1.420 ; \timer1:count1[6]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.671      ;
-; 1.422 ; \timer1:count1[12]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.666      ;
+; 0.338 ; LED_FLAG             ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 0.597      ;
+; 0.338 ; ENAB2                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 0.597      ;
+; 0.354 ; ENAB1                ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.597      ;
+; 0.365 ; rst_state            ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.608      ;
+; 0.398 ; prev_state           ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.641      ;
+; 0.432 ; RST                  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.675      ;
+; 0.655 ; rst_state            ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.898      ;
+; 0.659 ; RST                  ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.902      ;
+; 0.660 ; RST                  ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.903      ;
+; 0.664 ; RST                  ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.907      ;
+; 0.667 ; RST                  ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.910      ;
+; 0.667 ; RST                  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 0.910      ;
+; 0.808 ; rst_state            ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.051      ;
+; 0.861 ; ENAB1                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.474      ; 1.506      ;
+; 0.872 ; RST                  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.118      ;
+; 0.873 ; RST                  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.119      ;
+; 0.874 ; RST                  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.120      ;
+; 0.885 ; rst_state            ; \timer1:count1[5]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.135      ;
+; 0.885 ; rst_state            ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.135      ;
+; 0.885 ; rst_state            ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.079      ; 1.135      ;
+; 0.904 ; RST                  ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.150      ;
+; 0.921 ; \timer2_p:count2[20] ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.164      ;
+; 0.921 ; \timer1:count1[20]   ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.164      ;
+; 0.924 ; \timer2_p:count2[14] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.167      ;
+; 0.924 ; \timer1:count1[11]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.167      ;
+; 0.927 ; \timer2_p:count2[12] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.170      ;
+; 0.928 ; \timer1:count1[14]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.171      ;
+; 0.929 ; \timer2_p:count2[11] ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.172      ;
+; 0.930 ; \timer1:count1[12]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.173      ;
+; 0.989 ; RST                  ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.233      ;
+; 0.991 ; RST                  ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.235      ;
+; 0.992 ; RST                  ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.236      ;
+; 0.992 ; RST                  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.236      ;
+; 0.993 ; RST                  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.237      ;
+; 1.006 ; RST                  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.468      ; 1.645      ;
+; 1.027 ; \timer2_p:count2[21] ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.270      ;
+; 1.028 ; rst_state            ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.271      ;
+; 1.032 ; \timer2_p:count2[2]  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.276      ;
+; 1.037 ; \timer1:count1[13]   ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.280      ;
+; 1.039 ; led_flag_off         ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 1.298      ;
+; 1.067 ; rst_state            ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.310      ;
+; 1.085 ; rst_state            ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.328      ;
+; 1.086 ; rst_state            ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.329      ;
+; 1.090 ; RST                  ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.342      ;
+; 1.091 ; RST                  ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.343      ;
+; 1.093 ; RST                  ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.345      ;
+; 1.094 ; RST                  ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.346      ;
+; 1.097 ; rst_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.340      ;
+; 1.098 ; RST                  ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.349      ;
+; 1.102 ; RST                  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.348      ;
+; 1.105 ; rst_state            ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.070      ; 1.346      ;
+; 1.109 ; RST                  ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.355      ;
+; 1.132 ; \timer1:count1[21]   ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.375      ;
+; 1.143 ; \timer1:count1[1]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.387      ;
+; 1.149 ; RST                  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.468      ; 1.788      ;
+; 1.156 ; \timer1:count1[5]    ; \timer1:count1[5]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.400      ;
+; 1.158 ; led_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.401      ;
+; 1.165 ; \timer2_p:count2[1]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.409      ;
+; 1.165 ; \timer2_p:count2[13] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.408      ;
+; 1.165 ; led_flag_off         ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.088      ; 1.424      ;
+; 1.168 ; RST                  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.075      ; 1.414      ;
+; 1.169 ; \timer2_p:count2[9]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.413      ;
+; 1.169 ; \timer2_p:count2[5]  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.413      ;
+; 1.173 ; LED_FLAG             ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.305     ; 1.039      ;
+; 1.176 ; rst_state            ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.419      ;
+; 1.179 ; rst_state            ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.422      ;
+; 1.184 ; \timer2_p:count2[18] ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.427      ;
+; 1.190 ; \timer2_p:count2[15] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.433      ;
+; 1.190 ; rst_state            ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.430      ;
+; 1.190 ; rst_state            ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.430      ;
+; 1.192 ; rst_state            ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.432      ;
+; 1.193 ; rst_state            ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.433      ;
+; 1.194 ; rst_state            ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.069      ; 1.434      ;
+; 1.194 ; \timer1:count1[10]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.436      ;
+; 1.196 ; \timer2_p:count2[10] ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.438      ;
+; 1.205 ; \timer2_p:count2[16] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.448      ;
+; 1.210 ; \timer2_p:count2[17] ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.453      ;
+; 1.210 ; \timer1:count1[13]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.453      ;
+; 1.211 ; \timer1:count1[11]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.454      ;
+; 1.213 ; \timer2_p:count2[13] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.456      ;
+; 1.214 ; \timer2_p:count2[3]  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.073      ; 1.458      ;
+; 1.216 ; \timer2_p:count2[11] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.459      ;
+; 1.218 ; \timer1:count1[19]   ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.461      ;
+; 1.222 ; \timer1:count1[10]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.464      ;
+; 1.222 ; \timer2_p:count2[10] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.464      ;
+; 1.225 ; \timer2_p:count2[12] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.468      ;
+; 1.228 ; \timer1:count1[12]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.072      ; 1.471      ;
+; 1.249 ; rst_state            ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.465      ; 1.885      ;
+; 1.255 ; RST                  ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.508      ;
+; 1.255 ; RST                  ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.082      ; 1.508      ;
+; 1.277 ; \timer1:count1[21]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.468      ; 1.916      ;
+; 1.297 ; rst_state            ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.545      ;
+; 1.297 ; rst_state            ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.545      ;
+; 1.297 ; rst_state            ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.545      ;
+; 1.297 ; rst_state            ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.077      ; 1.545      ;
+; 1.297 ; \timer2_p:count2[14] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.539      ;
+; 1.298 ; RST                  ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.081      ; 1.550      ;
+; 1.300 ; \timer2_p:count2[9]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.071      ; 1.542      ;
+; 1.302 ; RST                  ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.553      ;
+; 1.303 ; RST                  ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.080      ; 1.554      ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -680,7 +680,7 @@ No synchronizer chains to report.
 +---------+--------+-----------------+
 ; Clock   ; Slack  ; End Point TNS   ;
 +---------+--------+-----------------+
-; CLK_50M ; -1.334 ; -36.078         ;
+; CLK_50M ; -1.332 ; -33.069         ;
 +---------+--------+-----------------+
 
 
@@ -689,7 +689,7 @@ No synchronizer chains to report.
 +---------+-------+-----------------+
 ; Clock   ; Slack ; End Point TNS   ;
 +---------+-------+-----------------+
-; CLK_50M ; 0.174 ; 0.000           ;
+; CLK_50M ; 0.173 ; 0.000           ;
 +---------+-------+-----------------+
 
 
@@ -710,7 +710,7 @@ No paths to report.
 +---------+--------+-------------------------------+
 ; Clock   ; Slack  ; End Point TNS                 ;
 +---------+--------+-------------------------------+
-; CLK_50M ; -3.000 ; -58.522                       ;
+; CLK_50M ; -3.000 ; -58.335                       ;
 +---------+--------+-------------------------------+
 
 
@@ -719,106 +719,106 @@ No paths to report.
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; -1.334 ; \timer1:count1[1]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.476      ;
-; -1.325 ; \timer2_p:count2[3]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.468      ;
-; -1.320 ; \timer2_p:count2[1]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.463      ;
-; -1.286 ; \timer1:count1[0]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.428      ;
-; -1.272 ; \timer2_p:count2[3]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.415      ;
-; -1.272 ; \timer2_p:count2[0]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.415      ;
-; -1.268 ; \timer1:count1[3]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.410      ;
-; -1.267 ; \timer2_p:count2[1]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.410      ;
-; -1.220 ; \timer1:count1[2]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.362      ;
-; -1.219 ; \timer2_p:count2[0]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.362      ;
-; -1.203 ; \timer2_p:count2[2]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.346      ;
-; -1.199 ; \timer1:count1[5]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.341      ;
-; -1.181 ; \timer2_p:count2[5]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.324      ;
-; -1.153 ; \timer1:count1[4]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.295      ;
-; -1.150 ; \timer2_p:count2[2]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.293      ;
-; -1.135 ; \timer2_p:count2[4]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.278      ;
-; -1.130 ; \timer1:count1[7]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.272      ;
-; -1.128 ; \timer2_p:count2[5]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.271      ;
-; -1.123 ; \timer2_p:count2[10] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.266      ;
-; -1.115 ; \timer2_p:count2[7]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.258      ;
-; -1.082 ; \timer2_p:count2[4]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.225      ;
-; -1.081 ; \timer1:count1[6]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.223      ;
-; -1.077 ; \timer2_p:count2[8]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.220      ;
-; -1.070 ; \timer2_p:count2[10] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.213      ;
-; -1.065 ; \timer2_p:count2[6]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.208      ;
-; -1.063 ; \timer1:count1[9]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.205      ;
-; -1.062 ; \timer2_p:count2[7]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.205      ;
-; -1.050 ; \timer2_p:count2[9]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.193      ;
-; -1.045 ; \timer2_p:count2[11] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 2.197      ;
-; -1.024 ; \timer2_p:count2[8]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.167      ;
-; -1.014 ; \timer1:count1[8]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.156      ;
-; -1.012 ; \timer2_p:count2[6]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.155      ;
-; -1.001 ; \timer1:count1[11]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.150      ; 2.138      ;
-; -0.997 ; \timer2_p:count2[9]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.156      ; 2.140      ;
-; -0.992 ; \timer2_p:count2[11] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 2.144      ;
-; -0.964 ; \timer1:count1[15]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.148      ; 2.099      ;
-; -0.945 ; \timer1:count1[10]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.155      ; 2.087      ;
-; -0.932 ; \timer1:count1[13]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.150      ; 2.069      ;
-; -0.923 ; \timer1:count1[16]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.053     ; 1.857      ;
-; -0.916 ; \timer1:count1[17]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.053     ; 1.850      ;
-; -0.914 ; \timer1:count1[14]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.148      ; 2.049      ;
-; -0.910 ; \timer2_p:count2[15] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 2.060      ;
-; -0.906 ; \timer2_p:count2[13] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 2.058      ;
-; -0.898 ; \timer1:count1[18]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.053     ; 1.832      ;
-; -0.888 ; \timer1:count1[12]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.150      ; 2.025      ;
-; -0.882 ; \timer2_p:count2[3]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.041     ; 1.828      ;
-; -0.877 ; \timer1:count1[1]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.160      ; 2.024      ;
-; -0.877 ; \timer2_p:count2[1]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.041     ; 1.823      ;
-; -0.858 ; \timer2_p:count2[17] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 2.008      ;
-; -0.857 ; \timer2_p:count2[12] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 2.009      ;
-; -0.853 ; \timer2_p:count2[13] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 2.005      ;
-; -0.850 ; \timer2_p:count2[3]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.049     ; 1.788      ;
-; -0.845 ; \timer2_p:count2[1]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.049     ; 1.783      ;
-; -0.844 ; \timer2_p:count2[3]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.784      ;
-; -0.839 ; \timer2_p:count2[1]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.779      ;
-; -0.834 ; \timer2_p:count2[3]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.041     ; 1.780      ;
-; -0.830 ; \timer2_p:count2[0]  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.049     ; 1.768      ;
-; -0.829 ; \timer1:count1[0]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.160      ; 1.976      ;
-; -0.829 ; \timer2_p:count2[0]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.041     ; 1.775      ;
-; -0.829 ; \timer2_p:count2[1]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.041     ; 1.775      ;
-; -0.824 ; \timer2_p:count2[0]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.764      ;
-; -0.819 ; \timer2_p:count2[3]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.759      ;
-; -0.814 ; \timer2_p:count2[1]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.754      ;
-; -0.811 ; \timer1:count1[3]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.160      ; 1.958      ;
-; -0.804 ; \timer2_p:count2[12] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 1.956      ;
-; -0.799 ; \timer2_p:count2[0]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.739      ;
-; -0.797 ; \timer1:count1[1]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.160      ; 1.944      ;
-; -0.796 ; \timer2_p:count2[16] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 1.946      ;
-; -0.792 ; RST                  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.256     ; 1.523      ;
-; -0.792 ; RST                  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.256     ; 1.523      ;
-; -0.792 ; RST                  ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.256     ; 1.523      ;
-; -0.792 ; RST                  ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.256     ; 1.523      ;
-; -0.791 ; RST                  ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[6]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.791 ; RST                  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.248     ; 1.530      ;
-; -0.788 ; \timer2_p:count2[14] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.165      ; 1.940      ;
-; -0.787 ; \timer2_p:count2[3]  ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.047     ; 1.727      ;
-; -0.786 ; \timer1:count1[1]    ; \timer1:count1[8]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.040     ; 1.733      ;
-; -0.785 ; ENAB2                ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.240     ; 1.532      ;
-; -0.785 ; ENAB2                ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.240     ; 1.532      ;
-; -0.785 ; ENAB2                ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.240     ; 1.532      ;
-; -0.785 ; ENAB2                ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.240     ; 1.532      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[6]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
-; -0.784 ; ENAB2                ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.232     ; 1.539      ;
+; -1.332 ; \timer2_p:count2[1]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.471      ;
+; -1.316 ; \timer1:count1[3]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.456      ;
+; -1.310 ; \timer1:count1[1]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.450      ;
+; -1.307 ; \timer2_p:count2[1]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.446      ;
+; -1.286 ; \timer2_p:count2[0]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.425      ;
+; -1.286 ; \timer2_p:count2[0]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.425      ;
+; -1.264 ; \timer2_p:count2[3]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.403      ;
+; -1.262 ; \timer1:count1[0]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.402      ;
+; -1.239 ; \timer2_p:count2[3]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.378      ;
+; -1.218 ; \timer2_p:count2[2]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.357      ;
+; -1.218 ; \timer2_p:count2[2]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.357      ;
+; -1.207 ; \timer1:count1[4]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.347      ;
+; -1.197 ; \timer2_p:count2[5]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.336      ;
+; -1.195 ; \timer1:count1[2]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.335      ;
+; -1.176 ; \timer1:count1[5]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.316      ;
+; -1.172 ; \timer2_p:count2[5]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.311      ;
+; -1.151 ; \timer2_p:count2[4]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.290      ;
+; -1.151 ; \timer2_p:count2[4]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.290      ;
+; -1.127 ; \timer2_p:count2[7]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.266      ;
+; -1.112 ; \timer1:count1[9]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.252      ;
+; -1.102 ; \timer2_p:count2[7]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.241      ;
+; -1.101 ; \timer1:count1[7]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.241      ;
+; -1.077 ; \timer2_p:count2[6]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.216      ;
+; -1.065 ; \timer1:count1[8]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.205      ;
+; -1.062 ; \timer2_p:count2[9]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.201      ;
+; -1.056 ; \timer1:count1[6]    ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.196      ;
+; -1.052 ; \timer2_p:count2[6]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.191      ;
+; -1.037 ; \timer2_p:count2[9]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.176      ;
+; -1.013 ; \timer1:count1[15]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.060     ; 1.940      ;
+; -1.011 ; \timer2_p:count2[8]  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.150      ;
+; -0.994 ; \timer2_p:count2[11] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.134      ;
+; -0.986 ; \timer2_p:count2[8]  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.125      ;
+; -0.969 ; \timer2_p:count2[11] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.109      ;
+; -0.968 ; \timer1:count1[11]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 2.109      ;
+; -0.942 ; \timer2_p:count2[10] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.081      ;
+; -0.932 ; \timer2_p:count2[15] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 2.073      ;
+; -0.925 ; \timer2_p:count2[13] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.065      ;
+; -0.919 ; \timer1:count1[10]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.059      ;
+; -0.917 ; \timer2_p:count2[10] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.152      ; 2.056      ;
+; -0.878 ; \timer2_p:count2[12] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 2.018      ;
+; -0.868 ; \timer1:count1[13]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 2.009      ;
+; -0.864 ; \timer2_p:count2[17] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 2.005      ;
+; -0.854 ; \timer1:count1[3]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.799      ;
+; -0.848 ; \timer1:count1[1]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.793      ;
+; -0.837 ; \timer2_p:count2[15] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.978      ;
+; -0.832 ; \timer1:count1[3]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.776      ;
+; -0.830 ; \timer2_p:count2[13] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 1.970      ;
+; -0.826 ; \timer1:count1[1]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.770      ;
+; -0.825 ; \timer1:count1[3]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.770      ;
+; -0.823 ; \timer1:count1[12]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.964      ;
+; -0.822 ; \timer2_p:count2[16] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.963      ;
+; -0.819 ; \timer1:count1[1]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.764      ;
+; -0.814 ; \timer2_p:count2[19] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.955      ;
+; -0.813 ; \timer1:count1[0]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.757      ;
+; -0.809 ; \timer2_p:count2[14] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 1.949      ;
+; -0.806 ; \timer1:count1[17]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.947      ;
+; -0.800 ; \timer1:count1[0]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.745      ;
+; -0.784 ; \timer1:count1[3]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.729      ;
+; -0.783 ; \timer2_p:count2[12] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 1.923      ;
+; -0.780 ; \timer1:count1[3]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.724      ;
+; -0.778 ; \timer1:count1[1]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.723      ;
+; -0.776 ; \timer1:count1[3]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 1.926      ;
+; -0.774 ; \timer1:count1[1]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.718      ;
+; -0.771 ; \timer1:count1[0]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.716      ;
+; -0.770 ; \timer1:count1[1]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 1.920      ;
+; -0.769 ; \timer2_p:count2[17] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.910      ;
+; -0.768 ; \timer2_p:count2[1]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.044     ; 1.711      ;
+; -0.765 ; \timer1:count1[0]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.710      ;
+; -0.759 ; \timer1:count1[16]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.900      ;
+; -0.757 ; \timer2_p:count2[1]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.702      ;
+; -0.757 ; \timer1:count1[0]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 1.907      ;
+; -0.756 ; \timer2_p:count2[1]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.044     ; 1.699      ;
+; -0.754 ; \timer1:count1[14]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.895      ;
+; -0.753 ; \timer2_p:count2[0]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.044     ; 1.696      ;
+; -0.751 ; \timer2_p:count2[18] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.892      ;
+; -0.748 ; \timer2_p:count2[1]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.693      ;
+; -0.748 ; \timer1:count1[4]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.692      ;
+; -0.745 ; \timer1:count1[2]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.689      ;
+; -0.742 ; \timer2_p:count2[0]  ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.687      ;
+; -0.741 ; \timer2_p:count2[0]  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.044     ; 1.684      ;
+; -0.733 ; \timer1:count1[2]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.678      ;
+; -0.727 ; \timer2_p:count2[16] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.868      ;
+; -0.726 ; \timer1:count1[0]    ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.670      ;
+; -0.719 ; \timer2_p:count2[19] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.154      ; 1.860      ;
+; -0.718 ; \timer1:count1[4]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.663      ;
+; -0.717 ; \timer1:count1[3]    ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.661      ;
+; -0.714 ; \timer2_p:count2[14] ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.153      ; 1.854      ;
+; -0.711 ; \timer2_p:count2[1]  ; \timer2_p:count2[4]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.656      ;
+; -0.711 ; \timer1:count1[1]    ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.655      ;
+; -0.704 ; \timer1:count1[2]    ; \timer1:count1[10]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.649      ;
+; -0.700 ; \timer2_p:count2[3]  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.044     ; 1.643      ;
+; -0.700 ; \timer1:count1[4]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.645      ;
+; -0.699 ; \timer1:count1[3]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.643      ;
+; -0.698 ; \timer2_p:count2[0]  ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.643      ;
+; -0.698 ; \timer1:count1[0]    ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.642      ;
+; -0.697 ; \timer1:count1[2]    ; \timer1:count1[7]    ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.642      ;
+; -0.694 ; \timer1:count1[5]    ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.638      ;
+; -0.693 ; \timer2_p:count2[1]  ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.042     ; 1.638      ;
+; -0.693 ; \timer1:count1[1]    ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 1.000        ; -0.043     ; 1.637      ;
+; -0.692 ; \timer1:count1[4]    ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 1.000        ; 0.163      ; 1.842      ;
 +--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -827,106 +827,106 @@ No paths to report.
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; 0.174 ; led_flag_off         ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.049      ; 0.307      ;
-; 0.174 ; ENAB2                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.049      ; 0.307      ;
-; 0.174 ; ENAB1                ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.049      ; 0.307      ;
-; 0.189 ; rst_state            ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.314      ;
-; 0.250 ; RST                  ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.049      ; 0.383      ;
-; 0.317 ; prev_state           ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.049      ; 0.450      ;
-; 0.384 ; rst_state            ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.244      ; 0.712      ;
-; 0.407 ; rst_state            ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.039      ; 0.530      ;
-; 0.407 ; rst_state            ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.039      ; 0.530      ;
-; 0.432 ; rst_state            ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.246      ; 0.762      ;
-; 0.450 ; \timer2_p:count2[14] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.574      ;
-; 0.451 ; \timer2_p:count2[12] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.575      ;
-; 0.451 ; \timer2_p:count2[9]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.576      ;
-; 0.453 ; \timer2_p:count2[1]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.578      ;
-; 0.453 ; \timer1:count1[12]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.577      ;
-; 0.454 ; \timer1:count1[1]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.578      ;
-; 0.459 ; \timer1:count1[4]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.583      ;
-; 0.464 ; RST                  ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.164     ; 0.384      ;
-; 0.465 ; RST                  ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.164     ; 0.385      ;
-; 0.505 ; \timer1:count1[21]   ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.629      ;
-; 0.507 ; LED_FLAG             ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.154     ; 0.437      ;
-; 0.508 ; led_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.049      ; 0.641      ;
-; 0.516 ; rst_state            ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.244      ; 0.844      ;
-; 0.516 ; \timer1:count1[2]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.640      ;
-; 0.522 ; rst_state            ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.030      ; 0.636      ;
-; 0.522 ; rst_state            ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.030      ; 0.636      ;
-; 0.526 ; \timer2_p:count2[13] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.650      ;
-; 0.549 ; \timer2_p:count2[21] ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.673      ;
-; 0.556 ; rst_state            ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.031      ; 0.671      ;
-; 0.567 ; RST                  ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.164     ; 0.487      ;
-; 0.569 ; RST                  ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.164     ; 0.489      ;
-; 0.574 ; rst_state            ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.030      ; 0.688      ;
-; 0.576 ; rst_state            ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.031      ; 0.691      ;
-; 0.576 ; rst_state            ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.031      ; 0.691      ;
-; 0.578 ; RST                  ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.164     ; 0.498      ;
-; 0.584 ; \timer1:count1[13]   ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.708      ;
-; 0.585 ; \timer1:count1[20]   ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.709      ;
-; 0.590 ; \timer1:count1[11]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.714      ;
-; 0.591 ; rst_state            ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.230      ; 0.905      ;
-; 0.595 ; rst_state            ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.711      ;
-; 0.595 ; rst_state            ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.711      ;
-; 0.596 ; rst_state            ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.712      ;
-; 0.596 ; rst_state            ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.712      ;
-; 0.596 ; rst_state            ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.712      ;
-; 0.600 ; \timer1:count1[11]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.724      ;
-; 0.601 ; rst_state            ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.039      ; 0.724      ;
-; 0.601 ; \timer2_p:count2[13] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.725      ;
-; 0.603 ; \timer1:count1[15]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.727      ;
-; 0.604 ; \timer1:count1[10]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.733      ;
-; 0.606 ; \timer1:count1[3]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.730      ;
-; 0.610 ; \timer2_p:count2[20] ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.734      ;
-; 0.612 ; \timer2_p:count2[0]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.737      ;
-; 0.612 ; \timer1:count1[0]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.736      ;
-; 0.612 ; \timer2_p:count2[12] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.736      ;
-; 0.619 ; \timer1:count1[2]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.743      ;
-; 0.622 ; RST                  ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.166     ; 0.540      ;
-; 0.622 ; RST                  ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.166     ; 0.540      ;
-; 0.628 ; RST                  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.047      ; 0.759      ;
-; 0.633 ; rst_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.246      ; 0.963      ;
-; 0.634 ; rst_state            ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.033      ; 0.751      ;
-; 0.634 ; rst_state            ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.033      ; 0.751      ;
-; 0.636 ; rst_state            ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.033      ; 0.753      ;
-; 0.637 ; rst_state            ; \timer2_p:count2[10] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.039      ; 0.760      ;
-; 0.642 ; \timer2_p:count2[16] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.766      ;
-; 0.659 ; \timer1:count1[9]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.788      ;
-; 0.660 ; \timer2_p:count2[15] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.784      ;
-; 0.660 ; \timer2_p:count2[7]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.785      ;
-; 0.662 ; \timer2_p:count2[11] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.786      ;
-; 0.663 ; \timer1:count1[1]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.787      ;
-; 0.663 ; \timer1:count1[14]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.787      ;
-; 0.663 ; \timer2_p:count2[21] ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.252      ; 0.999      ;
-; 0.670 ; \timer1:count1[8]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.799      ;
-; 0.671 ; \timer1:count1[1]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.795      ;
-; 0.672 ; rst_state            ; \timer2_p:count2[0]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.039      ; 0.795      ;
-; 0.672 ; \timer2_p:count2[6]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.797      ;
-; 0.673 ; \timer2_p:count2[8]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.798      ;
-; 0.675 ; \timer2_p:count2[17] ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.799      ;
-; 0.675 ; \timer2_p:count2[9]  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.791      ;
-; 0.675 ; \timer1:count1[0]    ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.799      ;
-; 0.676 ; \timer2_p:count2[18] ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.800      ;
-; 0.680 ; \timer1:count1[19]   ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.804      ;
-; 0.683 ; ENAB1                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.033      ; 0.800      ;
-; 0.683 ; \timer2_p:count2[12] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.807      ;
-; 0.683 ; \timer1:count1[0]    ; \timer1:count1[4]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.807      ;
-; 0.687 ; RST                  ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.037      ; 0.808      ;
-; 0.691 ; \timer2_p:count2[19] ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.815      ;
-; 0.693 ; RST                  ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.037      ; 0.814      ;
-; 0.705 ; rst_state            ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.821      ;
-; 0.705 ; rst_state            ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.032      ; 0.821      ;
-; 0.706 ; rst_state            ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.039      ; 0.829      ;
-; 0.707 ; RST                  ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.037      ; 0.828      ;
-; 0.710 ; rst_state            ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.033      ; 0.827      ;
-; 0.710 ; rst_state            ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.033      ; 0.827      ;
-; 0.725 ; \timer1:count1[7]    ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.854      ;
-; 0.726 ; \timer2_p:count2[5]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.851      ;
-; 0.727 ; \timer1:count1[13]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.853      ;
-; 0.728 ; \timer2_p:count2[11] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.852      ;
-; 0.730 ; \timer1:count1[13]   ; \timer1:count1[15]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.856      ;
-; 0.734 ; \timer2_p:count2[14] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.860      ;
-; 0.737 ; RST                  ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.166     ; 0.655      ;
+; 0.173 ; LED_FLAG             ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.050      ; 0.307      ;
+; 0.173 ; ENAB2                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.050      ; 0.307      ;
+; 0.181 ; ENAB1                ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.307      ;
+; 0.188 ; rst_state            ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.314      ;
+; 0.190 ; prev_state           ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.316      ;
+; 0.224 ; RST                  ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.350      ;
+; 0.332 ; RST                  ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.458      ;
+; 0.332 ; rst_state            ; ENAB1                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.458      ;
+; 0.335 ; RST                  ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.461      ;
+; 0.340 ; RST                  ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.466      ;
+; 0.341 ; RST                  ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.467      ;
+; 0.342 ; RST                  ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.468      ;
+; 0.397 ; rst_state            ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.523      ;
+; 0.417 ; ENAB1                ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.248      ; 0.749      ;
+; 0.431 ; RST                  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.559      ;
+; 0.432 ; RST                  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.560      ;
+; 0.433 ; RST                  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.561      ;
+; 0.448 ; rst_state            ; \timer1:count1[5]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.577      ;
+; 0.448 ; rst_state            ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.577      ;
+; 0.448 ; rst_state            ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.045      ; 0.577      ;
+; 0.449 ; RST                  ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.577      ;
+; 0.452 ; \timer2_p:count2[20] ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.578      ;
+; 0.453 ; \timer1:count1[20]   ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.579      ;
+; 0.455 ; \timer1:count1[11]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.581      ;
+; 0.456 ; \timer2_p:count2[14] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.582      ;
+; 0.457 ; \timer1:count1[14]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.583      ;
+; 0.458 ; \timer2_p:count2[12] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; \timer2_p:count2[11] ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.584      ;
+; 0.459 ; \timer1:count1[12]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.585      ;
+; 0.485 ; RST                  ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.043      ; 0.612      ;
+; 0.485 ; RST                  ; \timer2_p:count2[20] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.043      ; 0.612      ;
+; 0.486 ; RST                  ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.043      ; 0.613      ;
+; 0.486 ; RST                  ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.043      ; 0.613      ;
+; 0.487 ; RST                  ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.043      ; 0.614      ;
+; 0.490 ; RST                  ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.246      ; 0.820      ;
+; 0.503 ; \timer2_p:count2[21] ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.629      ;
+; 0.505 ; rst_state            ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.631      ;
+; 0.511 ; \timer2_p:count2[2]  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.637      ;
+; 0.516 ; \timer1:count1[13]   ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.642      ;
+; 0.525 ; rst_state            ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.651      ;
+; 0.542 ; rst_state            ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.668      ;
+; 0.542 ; rst_state            ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.668      ;
+; 0.546 ; \timer1:count1[21]   ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.672      ;
+; 0.547 ; led_flag_off         ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.050      ; 0.681      ;
+; 0.549 ; RST                  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.677      ;
+; 0.550 ; RST                  ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.680      ;
+; 0.551 ; RST                  ; \timer1:count1[21]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.681      ;
+; 0.551 ; RST                  ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.679      ;
+; 0.552 ; RST                  ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.682      ;
+; 0.553 ; RST                  ; \timer1:count1[18]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.683      ;
+; 0.553 ; rst_state            ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.678      ;
+; 0.554 ; RST                  ; \timer1:count1[13]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.684      ;
+; 0.555 ; rst_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.681      ;
+; 0.575 ; \timer1:count1[1]    ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.701      ;
+; 0.576 ; \timer2_p:count2[15] ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.702      ;
+; 0.578 ; \timer1:count1[5]    ; \timer1:count1[5]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.704      ;
+; 0.581 ; \timer2_p:count2[18] ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.707      ;
+; 0.581 ; led_state            ; led_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.707      ;
+; 0.583 ; \timer2_p:count2[1]  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.709      ;
+; 0.584 ; \timer2_p:count2[9]  ; \timer2_p:count2[9]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.710      ;
+; 0.584 ; \timer2_p:count2[5]  ; \timer2_p:count2[5]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.710      ;
+; 0.585 ; LED_FLAG             ; rst_state            ; CLK_50M      ; CLK_50M     ; 0.000        ; -0.152     ; 0.517      ;
+; 0.585 ; RST                  ; \timer2_p:count2[1]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.044      ; 0.713      ;
+; 0.586 ; \timer2_p:count2[17] ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.712      ;
+; 0.586 ; \timer2_p:count2[13] ; \timer2_p:count2[13] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.712      ;
+; 0.591 ; \timer2_p:count2[16] ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.717      ;
+; 0.593 ; \timer1:count1[19]   ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.719      ;
+; 0.603 ; rst_state            ; \timer2_p:count2[21] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.727      ;
+; 0.603 ; rst_state            ; \timer2_p:count2[16] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.727      ;
+; 0.604 ; rst_state            ; \timer2_p:count2[8]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.730      ;
+; 0.605 ; rst_state            ; \timer2_p:count2[7]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.731      ;
+; 0.605 ; rst_state            ; \timer2_p:count2[18] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.729      ;
+; 0.605 ; \timer2_p:count2[13] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.731      ;
+; 0.605 ; \timer1:count1[13]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.731      ;
+; 0.605 ; \timer1:count1[11]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.731      ;
+; 0.606 ; rst_state            ; \timer2_p:count2[17] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.730      ;
+; 0.607 ; rst_state            ; \timer2_p:count2[15] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.040      ; 0.731      ;
+; 0.607 ; \timer2_p:count2[11] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.733      ;
+; 0.612 ; RST                  ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.246      ; 0.942      ;
+; 0.612 ; \timer1:count1[10]   ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.737      ;
+; 0.613 ; \timer2_p:count2[10] ; \timer2_p:count2[11] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.738      ;
+; 0.613 ; \timer2_p:count2[3]  ; \timer2_p:count2[3]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.739      ;
+; 0.616 ; \timer1:count1[10]   ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.741      ;
+; 0.616 ; \timer2_p:count2[10] ; \timer2_p:count2[12] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.041      ; 0.741      ;
+; 0.618 ; \timer2_p:count2[12] ; \timer2_p:count2[14] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.744      ;
+; 0.619 ; \timer1:count1[12]   ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.745      ;
+; 0.622 ; led_flag_off         ; LED_FLAG             ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.050      ; 0.756      ;
+; 0.636 ; \timer1:count1[21]   ; ENAB2                ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.246      ; 0.966      ;
+; 0.636 ; RST                  ; \timer1:count1[2]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.047      ; 0.767      ;
+; 0.636 ; RST                  ; \timer1:count1[1]    ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.047      ; 0.767      ;
+; 0.642 ; rst_state            ; led_flag_off         ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.244      ; 0.970      ;
+; 0.648 ; \timer1:count1[16]   ; \timer1:count1[16]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.774      ;
+; 0.653 ; \timer1:count1[17]   ; \timer1:count1[17]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.779      ;
+; 0.654 ; \timer2_p:count2[19] ; \timer2_p:count2[19] ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.780      ;
+; 0.658 ; RST                  ; \timer1:count1[19]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.788      ;
+; 0.661 ; RST                  ; \timer1:count1[11]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.791      ;
+; 0.661 ; \timer2_p:count2[1]  ; \timer2_p:count2[2]  ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.042      ; 0.787      ;
+; 0.662 ; RST                  ; \timer1:count1[20]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.792      ;
+; 0.662 ; RST                  ; \timer1:count1[14]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.792      ;
+; 0.663 ; RST                  ; \timer1:count1[12]   ; CLK_50M      ; CLK_50M     ; 0.000        ; 0.046      ; 0.793      ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -941,10 +941,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -3.719   ; 0.174 ; N/A      ; N/A     ; -3.000              ;
-;  CLK_50M         ; -3.719   ; 0.174 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -123.176 ; 0.0   ; 0.0      ; 0.0     ; -69.82              ;
-;  CLK_50M         ; -123.176 ; 0.000 ; N/A      ; N/A     ; -69.820             ;
+; Worst-case Slack ; -3.764   ; 0.173 ; N/A      ; N/A     ; -3.000              ;
+;  CLK_50M         ; -3.764   ; 0.173 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -118.146 ; 0.0   ; 0.0      ; 0.0     ; -69.82              ;
+;  CLK_50M         ; -118.146 ; 0.000 ; N/A      ; N/A     ; -69.820             ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1011,7 +1011,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK_50M    ; CLK_50M  ; 1539     ; 0        ; 0        ; 0        ;
+; CLK_50M    ; CLK_50M  ; 1578     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1021,7 +1021,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK_50M    ; CLK_50M  ; 1539     ; 0        ; 0        ; 0        ;
+; CLK_50M    ; CLK_50M  ; 1578     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1105,7 +1105,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 03 15:29:20 2023
+    Info: Processing started: Sun Oct 15 10:41:28 2023
 Info: Command: quartus_sta swdbnc -c swdbnc
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1122,10 +1122,10 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.719
+Info (332146): Worst-case setup slack is -3.764
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.719            -123.176 CLK_50M 
+    Info (332119):    -3.764            -118.146 CLK_50M 
 Info (332146): Worst-case hold slack is 0.385
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1142,10 +1142,10 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.287
+Info (332146): Worst-case setup slack is -3.372
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.287            -108.254 CLK_50M 
+    Info (332119):    -3.372            -102.955 CLK_50M 
 Info (332146): Worst-case hold slack is 0.338
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1160,25 +1160,25 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.334
+Info (332146): Worst-case setup slack is -1.332
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.334             -36.078 CLK_50M 
-Info (332146): Worst-case hold slack is 0.174
+    Info (332119):    -1.332             -33.069 CLK_50M 
+Info (332146): Worst-case hold slack is 0.173
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.174               0.000 CLK_50M 
+    Info (332119):     0.173               0.000 CLK_50M 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -58.522 CLK_50M 
+    Info (332119):    -3.000             -58.335 CLK_50M 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Tue Oct 03 15:29:22 2023
+    Info: Peak virtual memory: 4896 megabytes
+    Info: Processing ended: Sun Oct 15 10:41:30 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

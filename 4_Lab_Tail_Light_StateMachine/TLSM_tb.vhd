@@ -59,8 +59,9 @@ begin
         
         wait for 50 ns;
         SW_net <= "001";
+        wait for 600 ns;
 
-
+        SW_net <= "010";
         wait for 800 ns;
 
     assert false
