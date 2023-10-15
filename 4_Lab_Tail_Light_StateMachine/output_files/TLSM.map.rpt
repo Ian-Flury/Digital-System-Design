@@ -1,6 +1,6 @@
 Analysis & Synthesis report for TLSM
-Tue Oct 03 17:28:21 2023
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sun Oct 15 13:30:22 2023
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
 ---------------------
@@ -10,16 +10,25 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |tail_light_top|tailLight:tailLight_1|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -29,29 +38,28 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Oct 03 17:28:21 2023           ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; TLSM                                        ;
-; Top-level Entity Name              ; tail_light_top                              ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Oct 15 13:30:22 2023           ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                      ; TLSM                                            ;
+; Top-level Entity Name              ; tail_light_top                                  ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 68                                              ;
+;     Total combinational functions  ; 68                                              ;
+;     Dedicated logic registers      ; 29                                              ;
+; Total registers                    ; 29                                              ;
+; Total pins                         ; 11                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -145,15 +153,156 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; tailLight.vhd                    ; yes             ; User VHDL File  ; C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/tailLight.vhd ;         ;
+; toplevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/toplevel.vhd  ;         ;
+; counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/counter.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 68         ;
+;                                             ;            ;
+; Total combinational functions               ; 68         ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 19         ;
+;     -- 3 input functions                    ; 25         ;
+;     -- <=2 input functions                  ; 24         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 48         ;
+;     -- arithmetic mode                      ; 20         ;
+;                                             ;            ;
+; Total registers                             ; 29         ;
+;     -- Dedicated logic registers            ; 29         ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 11         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; KEY3~input ;
+; Maximum fan-out                             ; 35         ;
+; Total fan-out                               ; 300        ;
+; Average fan-out                             ; 2.52       ;
++---------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
+; |tail_light_top            ; 68 (0)              ; 29 (0)                    ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |tail_light_top                       ; tail_light_top ; work         ;
+;    |counter:counter_1|     ; 50 (50)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tail_light_top|counter:counter_1     ; counter        ; work         ;
+;    |tailLight:tailLight_1| ; 18 (18)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tail_light_top|tailLight:tailLight_1 ; tailLight      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |tail_light_top|tailLight:tailLight_1|state                                                                                                                       ;
++-------------------+------------------+----------------+----------------+-------------------+-----------------+-----------------+------------------+-------------------+-----------+
+; Name              ; state.left_three ; state.left_two ; state.left_one ; state.right_three ; state.right_two ; state.right_one ; state.hazard_one ; state.hazard_zero ; state.off ;
++-------------------+------------------+----------------+----------------+-------------------+-----------------+-----------------+------------------+-------------------+-----------+
+; state.off         ; 0                ; 0              ; 0              ; 0                 ; 0               ; 0               ; 0                ; 0                 ; 0         ;
+; state.hazard_zero ; 0                ; 0              ; 0              ; 0                 ; 0               ; 0               ; 0                ; 1                 ; 1         ;
+; state.hazard_one  ; 0                ; 0              ; 0              ; 0                 ; 0               ; 0               ; 1                ; 0                 ; 1         ;
+; state.right_one   ; 0                ; 0              ; 0              ; 0                 ; 0               ; 1               ; 0                ; 0                 ; 1         ;
+; state.right_two   ; 0                ; 0              ; 0              ; 0                 ; 1               ; 0               ; 0                ; 0                 ; 1         ;
+; state.right_three ; 0                ; 0              ; 0              ; 1                 ; 0               ; 0               ; 0                ; 0                 ; 1         ;
+; state.left_one    ; 0                ; 0              ; 1              ; 0                 ; 0               ; 0               ; 0                ; 0                 ; 1         ;
+; state.left_two    ; 0                ; 1              ; 0              ; 0                 ; 0               ; 0               ; 0                ; 0                 ; 1         ;
+; state.left_three  ; 1                ; 0              ; 0              ; 0                 ; 0               ; 0               ; 0                ; 0                 ; 1         ;
++-------------------+------------------+----------------+----------------+-------------------+-----------------+-----------------+------------------+-------------------+-----------+
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; counter:counter_1|\counter_p:count[20..23] ; Stuck at GND due to stuck port data_in ;
+; tailLight:tailLight_1|state.hazard_zero    ; Lost fanout                            ;
+; Total Number of Removed Registers = 5      ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 29    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |tail_light_top|tailLight:tailLight_1|state ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 11                          ;
+; cycloneiii_ff         ; 29                          ;
+;     CLR               ; 28                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 68                          ;
+;     arith             ; 20                          ;
+;         2 data inputs ; 20                          ;
+;     normal            ; 48                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 19                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.30                        ;
+; Average LUT depth     ; 5.51                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,23 +310,35 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 03 17:28:13 2023
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+    Info: Processing started: Sun Oct 15 13:30:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TLSM -c TLSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file taillight.vhd
+    Info (12022): Found design unit 1: tailLight-rtl File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/tailLight.vhd Line: 25
+    Info (12023): Found entity 1: tailLight File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/tailLight.vhd Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: tail_light_top-structural File: C:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine/toplevel.vhd Line: 15
-    Info (12023): Found entity 1: tail_light_top File: C:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine/toplevel.vhd Line: 8
+    Info (12022): Found design unit 1: tail_light_top-structural File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/toplevel.vhd Line: 17
+    Info (12023): Found entity 1: tail_light_top File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/toplevel.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: counter-rtl File: C:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine/counter.vhd Line: 14
-    Info (12023): Found entity 1: counter File: C:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine/counter.vhd Line: 7
-Error (10522): VHDL Syntax error at TLSM_tb.vhd(11): experienced unexpected end-of-file ;  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine/TLSM_tb.vhd Line: 11
-Info (12021): Found 0 design units, including 0 entities, in source file tlsm_tb.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4778 megabytes
-    Error: Processing ended: Tue Oct 03 17:28:21 2023
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:15
+    Info (12022): Found design unit 1: counter-rtl File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/counter.vhd Line: 15
+    Info (12023): Found entity 1: counter File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/counter.vhd Line: 7
+Info (12127): Elaborating entity "tail_light_top" for the top level hierarchy
+Info (12128): Elaborating entity "counter" for hierarchy "counter:counter_1" File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/toplevel.vhd Line: 40
+Info (12128): Elaborating entity "tailLight" for hierarchy "tailLight:tailLight_1" File: C:/Users/iflury/Documents/DSD_Projects/Digital-System-Design/4_Lab_Tail_Light_StateMachine/toplevel.vhd Line: 42
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 68 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Sun Oct 15 13:30:22 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

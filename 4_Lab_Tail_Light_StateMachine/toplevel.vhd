@@ -10,12 +10,13 @@ entity tail_light_top is
         clock_50M   : in std_logic;
         KEY3        : in std_logic;                         -- RST key
         SW          : in std_logic_vector(2 downto 0);
-        lights      : out std_logic_vector(5 downto 0);
-        clock_out   : out std_logic
+        lights      : out std_logic_vector(5 downto 0)
     );
 end tail_light_top;
 
 architecture structural of tail_light_top is
+
+	signal intermed_clk : std_logic;
 
 component counter
     port(
@@ -36,11 +37,11 @@ end component;
 
 begin
 
-    counter_1: counter port map(clock => clock_50M, RST => KEY3, clock_slow => clock_out);
+    counter_1: counter port map(clock => clock_50M, RST => KEY3, clock_slow => intermed_clk);
 
     tailLight_1: tailLight port 
     map(
-        clock_slow => clock_out,
+        clock_slow => intermed_clk,
         RST => KEY3,
         switches => SW,
         lights => lights

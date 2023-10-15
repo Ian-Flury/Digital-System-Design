@@ -1,0 +1,12 @@
+
+State Machine - |tail_light_top|tailLight:tailLight_1|state
+Name state.left_three state.left_two state.left_one state.right_three state.right_two state.right_one state.hazard_one state.hazard_zero state.off 
+state.off 0 0 0 0 0 0 0 0 0 
+state.hazard_zero 0 0 0 0 0 0 0 1 1 
+state.hazard_one 0 0 0 0 0 0 1 0 1 
+state.right_one 0 0 0 0 0 1 0 0 1 
+state.right_two 0 0 0 0 1 0 0 0 1 
+state.right_three 0 0 0 1 0 0 0 0 1 
+state.left_one 0 0 1 0 0 0 0 0 1 
+state.left_two 0 1 0 0 0 0 0 0 1 
+state.left_three 1 0 0 0 0 0 0 0 1 

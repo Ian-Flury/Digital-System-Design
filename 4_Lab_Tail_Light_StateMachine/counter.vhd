@@ -13,17 +13,16 @@ entity counter is
 end counter;
 
 architecture rtl of counter is
-    -- 25000000 / 24 is 24 Hz 
-    --constant limit_c : integer := 1000000;
-    constant limit_c : integer := 2;
+    -- 25000000
+    constant limit_c : integer := 12000000;
 begin
 
     counter_p: process(clock, RST)
         -- FIX: cannot set to zero right off the gate remove!
-        variable count : unsigned(23 downto 0) := (others => '0');
+        variable count : unsigned(32 downto 0) := (others => '0');
         variable toggle : std_logic := '0';
     begin
-        if RST = '1' then
+        if RST = '0' then
             count := (others => '0');
         elsif clock'EVENT and clock = '1' then
             count := count + 1;

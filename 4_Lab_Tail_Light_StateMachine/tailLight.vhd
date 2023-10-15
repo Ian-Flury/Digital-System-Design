@@ -33,7 +33,7 @@ begin
         variable r_count : unsigned(2 downto 0);
     begin
 
-        if RST = '1' then
+        if RST = '0' then
             lights_state <= (others => '0');
         else
             case state is
@@ -65,7 +65,7 @@ begin
 
     the_registers: process(clock_slow, RST)
     begin
-        if RST = '1' then
+        if RST = '0' then
             state <= off;
         elsif clock_slow'EVENT and clock_slow = '1' then
             if switches = "000" then
