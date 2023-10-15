@@ -1,6 +1,6 @@
 # Reading pref.tcl
 # vsim -gui -voptargs="+acc" work.tail_light_top_tb -do "./scripts/waves.do" 
-# Start time: 13:47:55 on Oct 14,2023
+# Start time: 19:33:06 on Oct 14,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -14,11 +14,11 @@
 # do ./scripts/waves.do
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ianfl  Hostname: IANS-PC  ProcessID: 28564
-#           Attempting to use alternate WLF file "./wlftv5w497".
+#           Attempting to use alternate WLF file "./wlft10by5y".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftv5w497
+#           Using alternate file: ./wlft10by5y
 # ** Failure: End of TestBench
-#    Time: 620 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
-# Break in Process tb_p at ./TLSM_tb.vhd line 68
+#    Time: 850 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
+# Break in Process tb_p at ./TLSM_tb.vhd line 67
 # 0 ps
-# 651 ns
+# 892500 ps

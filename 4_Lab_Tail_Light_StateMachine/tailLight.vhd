@@ -34,7 +34,7 @@ begin
     begin
 
         if RST = '1' then
-            lights <= (others => '0');
+            lights_state <= (others => '0');
         else
             case state is
                 when off =>
@@ -67,42 +67,39 @@ begin
     begin
         if RST = '1' then
             state <= off;
-            next_state <= off;
         elsif clock_slow'EVENT and clock_slow = '1' then
             if switches = "000" then
-                next_state <= off;
+                state <= off;
             elsif switches(0) = '1' then
                 -- hazard
-                if state /= hazard_zero then
-                    next_state <= hazard_zero;
-                else 
-                    next_state <= hazard_one;
+                if state /= hazard_one then
+                    state <= hazard_one;
+                else
+                    state <= hazard_zero;
                 end if;
             elsif switches(2) = '1' then
                 -- left signal
                 if state = off then
-                    next_state <= left_one;
+                    state <= left_one;
                 elsif state = left_one then
-                    next_state <= left_two;
+                    state <= left_two;
                 elsif state = left_two then
-                    next_state <= left_three;
+                    state <= left_three;
                 else
-                    next_state <= off;
+                    state <= off;
                 end if;
             elsif switches(1) = '1' then
                 -- right signals
                 if state = off then
-                    next_state <= right_one;
+                    state <= right_one;
                 elsif state = right_one then
-                    next_state <= right_two;
+                    state <= right_two;
                 elsif state = right_two then
-                    next_state <= right_three;
+                    state <= right_three;
                 else
-                    next_state <= off;
+                    state <= off;
                 end if;
             end if;
-            state <= next_state;
         end if;
     end process the_registers;
-
 end rtl;

@@ -13,8 +13,7 @@ end tail_light_top_tb;
 
 architecture tb of tail_light_top_tb is
 
-    constant period_c : time := 20 ns;
-
+    constant period_c   : time := 20 ns;
     signal clock_net    : std_logic;
     signal clock_slow   : std_logic;
     signal KEY3_net     : std_logic;
@@ -52,17 +51,17 @@ begin
 
     tb_p: process
     begin
+        -- wait for 20 ns;
+        -- SW_net <= (others => '0');
+        -- KEY3_net <= '1';
+        -- wait for 20 ns;
+        -- KEY3_net <= '0';
+        
+        wait for 50 ns;
+        SW_net <= "001";
 
-        SW_net <= (others => '0');
-        wait for 100 ns;
-        KEY3_net <= '1';
-        wait for 20 ns;
-        KEY3_net <= '0';
 
-        wait for 100 ns;
-        SW_net <= (others => '0');
-
-        wait for 400 ns;
+        wait for 800 ns;
 
     assert false
     report "End of TestBench"
