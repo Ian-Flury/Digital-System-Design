@@ -23,7 +23,7 @@ end tailLight;
 
 
 architecture rtl of tailLight is 
-    type state_t is (off, hazard_zero, hazard_one, right_one, right_two, right_three, left_one, left_two, left_three);
+    type state_t is (off, hazard_zero, hazard_one, hazard_two, hazard_three, right_one, right_two, right_three, left_one, left_two, left_three);
     signal state, next_state : state_t;
     signal lights_state : std_logic_vector(5 downto 0); 
 begin
@@ -42,7 +42,11 @@ begin
                 when hazard_zero =>
                     lights_state <= (others => '0');
                 when hazard_one =>
-                    lights_state <= (others => '1');
+                    lights_state <= "001100";
+					 when hazard_two =>
+                    lights_state <= "011110";
+                when hazard_three =>
+                    lights_state <= "111111";
                 when right_one =>
                     lights_state <= "000100";
                 when right_two =>
@@ -72,11 +76,15 @@ begin
                 state <= off;
             elsif switches(0) = '1' then
                 -- hazard
-                if state /= hazard_one then
-                    state <= hazard_one;
-                else
-                    state <= hazard_zero;
-                end if;
+                if state = hazard_zero then
+						state <= hazard_one;
+					 elsif state = hazard_one then
+						state <= hazard_two;
+					 elsif state = hazard_two then
+						state <= hazard_three;
+					 else
+						state <= hazard_zero;
+					 end if;					 
             elsif switches(2) = '1' then
                 -- left signal
                 if state = off then
