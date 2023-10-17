@@ -1,6 +1,6 @@
 # Reading pref.tcl
 # vsim -gui -voptargs="+acc" work.tail_light_top_tb -do "./scripts/waves.do" 
-# Start time: 11:25:15 on Oct 15,2023
+# Start time: 09:59:12 on Oct 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -14,15 +14,13 @@
 # do ./scripts/waves.do
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ianfl  Hostname: IANS-PC  ProcessID: 28564
-#           Attempting to use alternate WLF file "./wlft2giz9f".
+#           Attempting to use alternate WLF file "./wlftsq6vrk".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft2giz9f
+#           Using alternate file: ./wlftsq6vrk
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tail_light_top_tb/tail_light_top_instance/tailLight_1
 # ** Failure: End of TestBench
 #    Time: 1450 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
-# Break in Process tb_p at ./TLSM_tb.vhd line 68
+# Break in Process tb_p at ./TLSM_tb.vhd line 66
 # 0 ps
 # 1522500 ps
-run -a
-# ** Failure: End of TestBench
-#    Time: 2900 ns  Iteration: 0  Process: /tail_light_top_tb/tb_p File: ./TLSM_tb.vhd
-# Break in Process tb_p at ./TLSM_tb.vhd line 68
