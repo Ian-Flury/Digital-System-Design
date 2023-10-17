@@ -25,8 +25,7 @@ architecture tb of tail_light_top_tb is
             clock_50M   : in std_logic;
             KEY3        : in std_logic;                         -- RST key
             SW          : in std_logic_vector(2 downto 0);
-            lights      : out std_logic_vector(5 downto 0);
-            clock_out   : out std_logic
+            lights      : out std_logic_vector(5 downto 0)
         );
     end component tail_light_top;
 
@@ -37,8 +36,7 @@ begin
         clock_50M => clock_net,
         KEY3 => KEY3_net,
         SW => SW_net,
-        lights => lights_net,
-        clock_out => clock_slow
+        lights => lights_net
     );
     
     tb_clk: process

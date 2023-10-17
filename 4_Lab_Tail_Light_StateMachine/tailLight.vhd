@@ -23,7 +23,7 @@ end tailLight;
 
 
 architecture rtl of tailLight is 
-    type state_t is (off, hazard_zero, hazard_one, hazard_two, hazard_three, right_one, right_two, right_three, left_one, left_two, left_three);
+    type state_t is (off, hazard_one, hazard_two, hazard_three, right_one, right_two, right_three, left_one, left_two, left_three);
     signal state, next_state : state_t;
     signal lights_state : std_logic_vector(5 downto 0); 
 begin
@@ -35,30 +35,137 @@ begin
 
         if RST = '0' then
             lights_state <= (others => '0');
+            next_state <= off;
         else
             case state is
                 when off =>
                     lights_state <= (others => '0');
-                when hazard_zero =>
-                    lights_state <= (others => '0');
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= hazard_one;
+                    elsif switches(2) = '1' then
+                        next_state <= left_one;
+                    else
+                        next_state <= right_one;
+                    end if;
                 when hazard_one =>
                     lights_state <= "001100";
-					 when hazard_two =>
+                    
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= hazard_two;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= off;
+                    end if;
+
+                when hazard_two =>
                     lights_state <= "011110";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= hazard_three;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= off;
+                    end if;
+
                 when hazard_three =>
                     lights_state <= "111111";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= off;
+                    end if;
+
                 when right_one =>
                     lights_state <= "000100";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= right_two;
+                    end if;
+
                 when right_two =>
                     lights_state <= "000110";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= right_three;
+                    end if;
+
                 when right_three =>
                     lights_state <= "000111";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= off;
+                    end if;
+
                 when left_one =>
                     lights_state <= "001000";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= left_two;
+                    else
+                        next_state <= off;
+                    end if;
+
                 when left_two =>
                     lights_state <= "011000";
+                    
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= left_three;
+                    else
+                        next_state <= off;
+                    end if;
+
                 when left_three =>
                     lights_state <= "111000";
+
+                    if switches = "000" then
+                        next_state <= off;
+                    elsif switches(0) = '1' then
+                        next_state <= off;
+                    elsif switches(2) = '1' then
+                        next_state <= off;
+                    else
+                        next_state <= off;
+                    end if;
+
                 when others =>
                     -- do nothing
             end case;
@@ -72,42 +179,7 @@ begin
         if RST = '0' then
             state <= off;
         elsif clock_slow'EVENT and clock_slow = '1' then
-            if switches = "000" then
-                state <= off;
-            elsif switches(0) = '1' then
-                -- hazard
-                if state = hazard_zero then
-						state <= hazard_one;
-					 elsif state = hazard_one then
-						state <= hazard_two;
-					 elsif state = hazard_two then
-						state <= hazard_three;
-					 else
-						state <= hazard_zero;
-					 end if;					 
-            elsif switches(2) = '1' then
-                -- left signal
-                if state = off then
-                    state <= left_one;
-                elsif state = left_one then
-                    state <= left_two;
-                elsif state = left_two then
-                    state <= left_three;
-                else
-                    state <= off;
-                end if;
-            elsif switches(1) = '1' then
-                -- right signals
-                if state = off then
-                    state <= right_one;
-                elsif state = right_one then
-                    state <= right_two;
-                elsif state = right_two then
-                    state <= right_three;
-                else
-                    state <= off;
-                end if;
-            end if;
+            state <= next_state;
         end if;
     end process the_registers;
 end rtl;

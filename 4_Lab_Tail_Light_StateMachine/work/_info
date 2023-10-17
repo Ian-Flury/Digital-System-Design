@@ -10,13 +10,13 @@ z2
 cModel Technology
 Z0 dC:/Users/ianfl/MobaXterm/home/QuartusProjects/4_Lab_Tail_Light_StateMachine
 Ecounter
-Z1 w1696706512
+Z1 w1697561011
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 278
+!i122 298
 R0
 Z7 8./counter.vhd
 Z8 F./counter.vhd
@@ -26,9 +26,9 @@ Vc<71Nkm`4SQA=TiTRKbK:3
 !s100 OA;D_ho:;A2_]kAKTzIBP1
 Z9 OV;C;2020.1;71
 33
-Z10 !s110 1697394309
+Z10 !s110 1697561944
 !i10b 1
-Z11 !s108 1697394309.000000
+Z11 !s108 1697561944.000000
 Z12 !s90 -work|work|-2008|-explicit|./counter.vhd|
 Z13 !s107 ./counter.vhd|
 !i113 1
@@ -41,11 +41,11 @@ R4
 R5
 R6
 DEx4 work 7 counter 0 22 c<71Nkm`4SQA=TiTRKbK:3
-!i122 278
-l19
-L15 30
-V9zZVocIC0cL?6HG;33Y0J0
-!s100 Kkb0ki2I^@aU2P;AI35TS3
+!i122 298
+l18
+L15 29
+VTIzT:ZVTLUaB9:L<aOdc73
+!s100 Nd1eS_MUJOnn8Mm0I:Z9I1
 R9
 33
 R10
@@ -57,25 +57,25 @@ R13
 R14
 R15
 Etail_light_top
-Z16 w1696706572
+Z16 w1697519008
 R2
 R3
 R4
 R5
 R6
-!i122 276
+!i122 296
 R0
 Z17 8./toplevel.vhd
 Z18 F./toplevel.vhd
 l0
 L8 1
-Vh9]Oe>z0iMH9::hin]?QB0
-!s100 @MG0TTNXMd]oJ`Pe3bHPS2
+V1zXQ`=0gNmCL:TUZ@69JX3
+!s100 [5hTRXD3D9Tzf`MI9OzO22
 R9
 33
-Z19 !s110 1697394308
+Z19 !s110 1697561943
 !i10b 1
-Z20 !s108 1697394308.000000
+Z20 !s108 1697561943.000000
 Z21 !s90 -work|work|-2008|-explicit|./toplevel.vhd|
 Z22 !s107 ./toplevel.vhd|
 !i113 1
@@ -87,12 +87,12 @@ R3
 R4
 R5
 R6
-DEx4 work 14 tail_light_top 0 22 h9]Oe>z0iMH9::hin]?QB0
-!i122 276
-l37
-L18 32
-VP6dKDFoaN4geD??KBDbl:1
-!s100 Jm55I@Rm`oY8<QC@2PVfB2
+DEx4 work 14 tail_light_top 0 22 1zXQ`=0gNmCL:TUZ@69JX3
+!i122 296
+l38
+L17 34
+VBf42APz?]kPAlc?hhHhMP2
+!s100 LLQDWeDcDQAI^7V>`[mk00
 R9
 33
 R19
@@ -104,10 +104,10 @@ R22
 R14
 R15
 Etail_light_top_tb
-Z23 w1697394306
+Z23 w1697561942
 R5
 R6
-!i122 279
+!i122 299
 R0
 Z24 8./TLSM_tb.vhd
 Z25 F./TLSM_tb.vhd
@@ -129,11 +129,11 @@ Atb
 R5
 R6
 Z28 DEx4 work 17 tail_light_top_tb 0 22 Q]^FGj?hkPhik29oT>>GD0
-!i122 279
-l33
-Z29 L14 59
-VdZX;ec4aCLOD8d;=J1L_Y1
-!s100 KSA5l]?zXJZidn6_mRj_30
+!i122 299
+l32
+L14 57
+VONJkJ<Y_Gnzj;8[DPB85i0
+!s100 Adfle[[nVcM>bG>jj<:GD3
 R9
 33
 R10
@@ -145,16 +145,16 @@ R27
 R14
 R15
 Etaillight
-Z30 w1697337177
+Z29 w1697561884
 R2
 R3
 R4
 R5
 R6
-!i122 277
+!i122 297
 R0
-Z31 8./tailLight.vhd
-Z32 F./tailLight.vhd
+Z30 8./tailLight.vhd
+Z31 F./tailLight.vhd
 l0
 L15 1
 VClO:fOCXU4ZjdR8zTBdLf1
@@ -163,9 +163,9 @@ R9
 33
 R10
 !i10b 1
-R20
-Z33 !s90 -work|work|-2008|-explicit|./tailLight.vhd|
-Z34 !s107 ./tailLight.vhd|
+R11
+Z32 !s90 -work|work|-2008|-explicit|./tailLight.vhd|
+Z33 !s107 ./tailLight.vhd|
 !i113 1
 R14
 R15
@@ -176,18 +176,18 @@ R4
 R5
 R6
 DEx4 work 9 taillight 0 22 ClO:fOCXU4ZjdR8zTBdLf1
-!i122 277
+!i122 297
 l29
-L25 81
-Vlkn]QD0]N`heWH3JTm<mQ3
-!s100 B_GJjNK_f66khmBo>bGfi3
+L25 161
+VUBb8PZ9KF]o[gFjLhNXWe3
+!s100 QXXhBUINkTX?9I4@6bU7K0
 R9
 33
 R10
 !i10b 1
-R20
+R11
+R32
 R33
-R34
 !i113 1
 R14
 R15
