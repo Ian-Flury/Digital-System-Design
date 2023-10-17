@@ -5,6 +5,7 @@
 **.mti
 **.mpf
 **.wlf
+**.qdf
 
 # Directories to ignore
 **/db/
