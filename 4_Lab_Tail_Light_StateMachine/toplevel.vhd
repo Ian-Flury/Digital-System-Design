@@ -8,7 +8,7 @@ use work.all;
 entity tail_light_top is
     port(
         clock_50M   : in std_logic;
-        KEY3        : in std_logic;                         -- RST key
+        KEY3        : in std_logic;
         SW          : in std_logic_vector(2 downto 0);
         lights      : out std_logic_vector(5 downto 0)
     );
