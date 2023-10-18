@@ -42,3 +42,45 @@ begin
     end process;
 
 end rtl;
+
+-- -------- Problem 2 --------
+-- (a) Explain why a latch would be created when the code is synthesized.
+--      - A latch would be created because the "if" statement do not have an "else" case.
+--        This means that we are no specifying what should happen with every possible 
+--        combination of inputs.
+--        For example, if state = 0 and X = 1, we go to state 1, then if X still = 1,
+--        we haven't defined what should happen with an else condition, and we infer a
+--        a latch.
+-- (b) What signal would appear at the latch output?
+--      - nextstate would be latched at 1. (if X = 1) when we enter state 1.
+-- (c) Make changes in the code which would eliminate the latch.
+
+process(state, X)
+begin
+    case state is
+        when 0 => 
+            if X = '1' then 
+                nextstate <= 1;
+            else
+                nextstate <= 0;
+            end if;
+        when 1 =>
+            if X = '0' then 
+                nextstate <= 2;
+            else
+                nextstate <= 0;
+            end if;
+        when 2 =>
+            if X = '1' then
+                nextstate <= 0;
+            else
+                nextstate <= 0;
+            end if;
+        when others =>
+            nextstate <= 0;
+    end case;
+end process;
+
+-- -------- Problem 3 --------
+-- What is wrong with the following model of a 4-1 mux? (not a syntax problem)
+-- - There is an inferred latch in the case statement, because there is no "when others =>"
