@@ -6,6 +6,8 @@
 **.mpf
 **.wlf
 **.qdf
+**transcript
+**.vcd
 
 # Directories to ignore
 **/db/
