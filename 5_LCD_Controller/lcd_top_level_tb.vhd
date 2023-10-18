@@ -45,7 +45,7 @@ begin
     
     
         KEY3_net <= '0';
-
+        wait for 100 ns;
 
     assert false
     report "End of TestBench"
