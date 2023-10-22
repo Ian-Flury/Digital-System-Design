@@ -36,11 +36,10 @@ begin
             for i in reg'high downto reg'low + 1 loop
                 reg(i) <= reg(i-1);
             end loop;
-            SO <= reg(reg'high);
             reg(reg'low) <= SI;
         end if;
     end process;
-
+	SO <= reg(reg'high);
 end rtl;
 
 -- -------- Problem 2 --------
@@ -52,9 +51,12 @@ end rtl;
 --        we haven't defined what should happen with an else condition, and we infer a
 --        a latch.
 -- (b) What signal would appear at the latch output?
---      - nextstate would be latched at 1. (if X = 1) when we enter state 1.
+--      - nextstate would be latched at the output.
 -- (c) Make changes in the code which would eliminate the latch.
-
+--      - Inside of the else statements, we define that the state should stay at the current
+--        until the condition for moving on is met. The functionality of the logic 
+--        would be the same without these statement, but I have chosen to include them for
+--        clarity.
 process(state, X)
 begin
     case state is
@@ -68,13 +70,13 @@ begin
             if X = '0' then 
                 nextstate <= 2;
             else
-                nextstate <= 0;
+                nextstate <= 1;
             end if;
         when 2 =>
             if X = '1' then
                 nextstate <= 0;
             else
-                nextstate <= 0;
+                nextstate <= 2;
             end if;
         when others =>
             nextstate <= 0;
@@ -83,4 +85,5 @@ end process;
 
 -- -------- Problem 3 --------
 -- What is wrong with the following model of a 4-1 mux? (not a syntax problem)
--- - There is an inferred latch in the case statement, because there is no "when others =>"
+-- - The signal "sel" in the architecture needs to be made a variable inside of the process
+--   so it can be re-asigned inside of the process.

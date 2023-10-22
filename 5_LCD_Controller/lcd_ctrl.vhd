@@ -30,6 +30,8 @@ begin
 
 
     the_machine: process(state, RST)
+        -- FIXME: Evaluate whether 8 bits are actually necessary or not.
+        variable delay_cntr : unsigned(7 downto 0);
     begin
         if RST = '1' then
             next_state <= Fn_1;
@@ -37,11 +39,16 @@ begin
 
             case state is
                 when Fn_1 =>
-                    -- outputs
-                    next_state <= Fn_2;
+                    -- turn on power
                 when Fn_2 =>
+                    -- wait 
                     next_state <= Fn_3;
                 when Fn_3 =>
+                    LCD_DATA <= "00110000";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
+                    -- wait for 4.1 ms;
+                    -- do this by incrementing a counter till it reaches 3 (x2 ms)
                     next_state <= Fn_4;
                 when Fn_4 =>
                     next_state <= Clr_Disp;
