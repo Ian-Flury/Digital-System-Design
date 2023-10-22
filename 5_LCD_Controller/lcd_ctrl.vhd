@@ -40,6 +40,7 @@ begin
             case state is
                 when Fn_1 =>
                     -- turn on power
+                    next_state <= Fn_2;
                 when Fn_2 =>
                     -- wait 
                     next_state <= Fn_3;
@@ -70,6 +71,11 @@ begin
 
     the_registers: process(clock)
     begin
+        if RST = '1' then
+            state <= Fn_1;
+        elsif clock'EVENT and clock = '1' then
+            state <= next_state;
+        end if;
     end process the_registers;
 
 end rtl;

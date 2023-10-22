@@ -64,7 +64,10 @@ begin
     tb_p: process
     begin
 
+        KEY3_net <= '1';
+        wait for 20 ns;
         KEY3_net <= '0';
+
         wait for 800 ns;
 
     assert false
