@@ -65,5 +65,4 @@ begin
         LCD_BLON => LCD_BLON
     );
 
-
 end structural;

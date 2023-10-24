@@ -68,7 +68,7 @@ begin
         wait for 20 ns;
         KEY3_net <= '0';
 
-        wait for 800 ns;
+        wait for 2000 ns;
 
     assert false
     report "End of TestBench"
