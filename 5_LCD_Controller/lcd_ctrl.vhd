@@ -23,69 +23,111 @@ architecture rtl of lcd_ctrl is
 -- Note: the "running" mode is the state of the initialization machine when 
 --       init is complete and the display is ready to be communicated with normally,
 --       i.e. a character write sequence can be performed.
-type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, Clr_Disp, Disp_Ctl, Entry_Mode, running);
+type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, Clr_Disp, Disp_Ctl, Entry_Mode, Set_Address_V, V, H, Set_Address_D, D, L, Set_Address_num, num, Ret_Home);
+
 signal state, next_state : state_t;
 
 begin
 
 
     the_machine: process(state, RST)
-        -- FIXME: Evaluate whether 8 bits are actually necessary or not.
-        variable delay_cntr : unsigned(7 downto 0);
-    begin
-        if RST = '1' then
+		  variable num : unsigned(3 downto 0);
+	 begin
+        if RST = '0' then
             next_state <= Fn_1;
             LCD_DATA <= (others => '0');
-            delay_cntr := (others => '0');
-            LCD_EN <= '0';
             LCD_RW <= '0';
             LCD_RS <= '0';
             LCD_ON <= '0';
             LCD_BLON <= '0';
         else
-            case state is
+				LCD_ON <= '1';
+				LCD_BLON <= '0';
+				case state is
                 when Fn_1 =>
                     -- turn on power
-                    LCD_DATA <= (others => '0');
-                    next_state <= Fn_2;
-                when Fn_2 =>
-                    -- wait 
-                    LCD_DATA <= (others => '0');
-                    next_state <= Fn_3;
-                when Fn_3 =>
                     LCD_DATA <= "00110000";
                     LCD_RS <= '0';
                     LCD_RW <= '0';
-                    -- wait for 4.1 ms;
-                    -- do this by incrementing a counter till it reaches 3 (x2 ms)
-                    if delay_cntr > 1 then
-                        next_state <= Fn_4;
-                        delay_cntr := (others => '0');
-                    else
-                        delay_cntr := delay_cntr + 1;
-                    end if;
+						  next_state <= Fn_2;
+                when Fn_2 =>
+                    -- wait 
+						  LCD_DATA <= "00110000";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
+                    next_state <= Fn_3;
+                when Fn_3 =>
+						  LCD_DATA <= "00110000";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
+                    next_state <= Fn_4;
                 when Fn_4 =>
-                    LCD_DATA <= (others => '0');
+                    LCD_DATA <= "00111000";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
                     next_state <= Clr_Disp;
                 when Clr_Disp =>
-                    next_state <= Disp_Ctl;
-                when Disp_Ctl =>
+						  LCD_DATA <= "00000001";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
+						  next_state <= Disp_Ctl;
+					 when Disp_Ctl =>
+                    LCD_DATA <= "00001100";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
                     next_state <= Entry_Mode;
                 when Entry_Mode =>
-                    next_state <= running;
-                when running =>
-
-                when others =>
+						  LCD_DATA <= "00000110";
+                    LCD_RS <= '0';
+                    LCD_RW <= '0';
+                    next_state <= Set_Address_V;
+                when Set_Address_V =>
+						  LCD_DATA <= (others => '0');
+						  LCD_RS <= '0';
+						  LCD_RW <= '0';
+						  next_state <= V;
+                when V =>
+						  LCD_DATA <= "01010110"; --V
+						  LCD_RS <= '1';
+						  LCD_RW <= '0';
+						  next_state <= H;
+					 when H =>
+						  LCD_DATA <= "01001000"; --H
+						  LCD_RS <= '1';
+						  LCD_RW <= '0';
+						  next_state <= Set_Address_D;
+					 when Set_Address_D =>
+						  LCD_DATA <= "01001000";
+						  LCD_RS <= '0';
+						  LCD_RW <= '0';
+						  next_state <= D;
+					 when D =>
+						  LCD_DATA <= "01000100";
+						  LCD_RS <= '1';
+						  LCD_RW <= '0';
+						  next_state <= L;
+					 when L =>
+						  LCD_DATA <= "01001100";
+						  LCD_RS <= '1';
+						  LCD_RW <= '0';
+						  next_state <= L;
+					 when Ret_Home =>
+						  LCD_DATA <= (others => '0');
+						  LCD_RS <= '0';
+						  LCD_RW <= '0';
+						-- num add: "11001111"
+					 when others =>
                     -- Do nothing
             end case;
 
         end if;
     end process the_machine;
+	
+    LCD_EN <= clock;
 
-
-    the_registers: process(clock)
+    the_registers: process(clock, RST)
     begin
-        if RST = '1' then
+        if RST = '0' then
             state <= Fn_1;
         elsif clock'EVENT and clock = '1' then
             state <= next_state;

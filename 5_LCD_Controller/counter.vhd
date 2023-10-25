@@ -16,7 +16,8 @@ architecture rtl of counter is
     -- 50,000,000 clk -> 20 ns period
     -- want slow clock to toggle every 1 ms to get a 2 ms T
     -- constant limit_c : integer := 50000;
-    constant limit_c : integer := 2;
+	 constant limit_c : integer := 65000;
+
 begin
 
     counter_p: process(clock, RST)

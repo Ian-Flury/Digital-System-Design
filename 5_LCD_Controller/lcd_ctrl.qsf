@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY lcd_top_level
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:43:56  SEPTEMBER 05, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -59,13 +59,30 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 
 
+
+
+
+set_global_assignment -name VHDL_FILE lcd_ctrl.vhd
 set_global_assignment -name VHDL_FILE lcd_top_level.vhd
-set_global_assignment -name VHDL_FILE lcd_controller.vhd
 set_global_assignment -name VHDL_FILE swdbnc.vhd
 set_global_assignment -name VHDL_FILE counter.vhd
-
 set_global_assignment -name SDC_FILE lcd_ctrl.sdc
 set_global_assignment -name TCL_SCRIPT_FILE lcd_ctrl.tcl
-
-
+set_location_assignment PIN_M23 -to KEY0
+set_location_assignment PIN_R24 -to KEY3
+set_location_assignment PIN_Y2 -to clock_50M
+set_location_assignment PIN_L6 -to LCD_BLON
+set_location_assignment PIN_M5 -to LCD_DATA[7]
+set_location_assignment PIN_M3 -to LCD_DATA[6]
+set_location_assignment PIN_K2 -to LCD_DATA[5]
+set_location_assignment PIN_K1 -to LCD_DATA[4]
+set_location_assignment PIN_K7 -to LCD_DATA[3]
+set_location_assignment PIN_L2 -to LCD_DATA[2]
+set_location_assignment PIN_L1 -to LCD_DATA[1]
+set_location_assignment PIN_L3 -to LCD_DATA[0]
+set_location_assignment PIN_L4 -to LCD_EN
+set_location_assignment PIN_M1 -to LCD_RW
+set_location_assignment PIN_M2 -to LCD_RS
+set_location_assignment PIN_L5 -to LCD_ON
+set_location_assignment PIN_E21 -to TEST_LED
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
