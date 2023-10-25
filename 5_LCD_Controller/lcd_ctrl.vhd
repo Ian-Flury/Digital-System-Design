@@ -23,8 +23,7 @@ architecture rtl of lcd_ctrl is
 -- Note: the "running" mode is the state of the initialization machine when 
 --       init is complete and the display is ready to be communicated with normally,
 --       i.e. a character write sequence can be performed.
-type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, Clr_Disp, Disp_Ctl, Entry_Mode, running);
---type write_state_t is (
+type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, Clr_Disp, Disp_Ctl, Entry_Mode, Set_Address, Write_Data, Ret_Home);
 
 signal state, next_state : state_t;
 
@@ -42,6 +41,7 @@ begin
             LCD_BLON <= '0';
         else
 				LCD_ON <= '1';
+				LCD_BLON <= '0';
 				case state is
                 when Fn_1 =>
                     -- turn on power
@@ -71,7 +71,7 @@ begin
                     LCD_RW <= '0';
 						  next_state <= Disp_Ctl;
 					 when Disp_Ctl =>
-                    LCD_DATA <= "00001111";
+                    LCD_DATA <= "00001100";
                     LCD_RS <= '0';
                     LCD_RW <= '0';
                     next_state <= Entry_Mode;
@@ -79,12 +79,23 @@ begin
 						  LCD_DATA <= "00000110";
                     LCD_RS <= '0';
                     LCD_RW <= '0';
-                    next_state <= running;
-                when running =>
+                    next_state <= Set_Address;
+                when Set_Address =>
+						  LCD_DATA <= (others => '0');
+						  LCD_RS <= '0';
+						  LCD_RW <= '0';
 						  
-						  
-						  next_state <= running;
-                when others =>
+						  next_state <= Write_Data;
+                when Write_Data =>
+						  LCD_DATA <= "01010110"; --V
+						  LCD_RS <= '1';
+						  LCD_RW <= '0';
+						  next_state <= Set_Address;
+					 when Ret_Home =>
+						  LCD_DATA <= (others => '0');
+						  LCD_RS <= '0';
+						  LCD_RW <= '0';
+					 when others =>
                     -- Do nothing
             end case;
 
