@@ -2,37 +2,34 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.all;
 
-entity sqrWv_tb is
-end sqrWv_tb;
+entity serial_tb is
+end serial_tb;
 
-architecture tb of sqrWv_tb is
+architecture tb of serial_tb is
 
     constant period_c   : time := 10 ns;
     signal clock_net    : std_logic;
     signal RST_net : std_logic;
-    signal H_net : std_logic_vector(3 downto 0);
-    signal L_net : std_logic_vector(3 downto 0);
+    signal serial_net : std_logic;
     signal wave_out_net : std_logic;
 
-    component sqrWv 
+    component serial 
         port (
             clock : in std_logic;
             RST : in std_logic;
-            H : in std_logic_vector(3 downto 0);
-            L : in std_logic_vector(3 downto 0);
+            serial : in std_logic;
             wave_out : out std_logic
         );
-    end component sqrWv;
+    end component serial;
 
 
 begin 
 
-    sqrWv_instance: sqrWv
+    serial_instance: serial
     port map(
         clock => clock_net,
         RST => RST_net,
-        H => H_net,
-        L => L_net,
+        serial => serial_net,
         wave_out => wave_out_net
     );
 
@@ -46,14 +43,12 @@ begin
 
     tb_p: process
     begin
-
-        H_net <= "0011";
-        L_net <= "0011";
+        serial_net <= '1';
         RST_net <= '1';
         wait for 4 * period_c;
         RST_net <= '0';
 
-        wait for 1600 ns;
+        wait for 600 ns;
 
         assert false
         report "End of TestBench"
