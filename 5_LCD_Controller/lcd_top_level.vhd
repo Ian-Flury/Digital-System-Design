@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 use work.all;
 
 
-entity lcd_ctrl_top is
+entity lcd_top_level is
     port(
         clock_50M   : in std_logic;
         KEY3        : in std_logic;
@@ -15,11 +15,12 @@ entity lcd_ctrl_top is
         LCD_RW      : out std_logic;
         LCD_RS      : out std_logic;
         LCD_ON      : out std_logic;
-        LCD_BLON    : out std_logic
+        LCD_BLON    : out std_logic;
+		  TEST_LED	  : out std_logic
     );
-end lcd_ctrl_top;
+end lcd_top_level;
 
-architecture structural of lcd_ctrl_top is
+architecture structural of lcd_top_level is
 
     signal two_ms_clk : std_logic;
 
@@ -46,6 +47,8 @@ architecture structural of lcd_ctrl_top is
 
 begin
 
+	 TEST_LED <= two_ms_clk;
+	 
     counter_1: counter port
     map(
         clock => clock_50M,
