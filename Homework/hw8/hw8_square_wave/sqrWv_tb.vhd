@@ -48,7 +48,7 @@ begin
     begin
 
         H_net <= "0011";
-        L_net <= "0011";
+        L_net <= "0010";
         RST_net <= '1';
         wait for 4 * period_c;
         RST_net <= '0';
