@@ -24,37 +24,45 @@ architecture rtl of serial is
 type state_t is (zero, one, two, three);
 signal state, next_state : state_t;
 
+
 begin
 
     the_machine: process(state, serial, RST)
     begin
         if RST = '1' then
-            next_state <= zero;
             wave_out <= '0';
+				next_state <= zero;
         else
             case state is
                 when zero =>
                     if serial = '1' then
                         next_state <= one;
-                    end if;
+                    else 
+								next_state <= zero;
+						  end if;
+						  wave_out <= '0';
                 when one =>
                     if serial = '1' then
                         next_state <= two;
                     else
                         next_state <= zero;
                     end if;
+						  wave_out <= '0';
                 when two =>
                     if serial = '1' then
                         next_state <= three;
                     else
                         next_state <= zero;
                     end if;
+						  wave_out <= '0';
                 when three =>
-                    wave_out <= '1';
-                    if serial = '0' then
-                        wave_out <= '0';
-                        next_state <= zero;
-                    end if;
+                    if serial = '1' then
+                        wave_out <= '1';
+                        next_state <= three;
+                    else
+								wave_out <= '0';
+								next_state <= zero;
+						  end if;
                 when others =>
             end case;
         end if;
