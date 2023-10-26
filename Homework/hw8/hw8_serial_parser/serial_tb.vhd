@@ -43,12 +43,27 @@ begin
 
     tb_p: process
     begin
-        serial_net <= '1';
+        serial_net <= '0';
         RST_net <= '1';
         wait for 4 * period_c;
         RST_net <= '0';
 
-        wait for 600 ns;
+        wait for period_c;
+
+        serial_net <= '1';
+        wait for 4 * period_c;
+
+        serial_net <= '0';
+        wait for 2 * period_c;
+
+        serial_net <= '1';
+        wait for 2 * period_c;
+
+        serial_net <= '1';
+        wait for 3 * period_c;
+
+        serial_net <= '0';
+        wait for 5 * period_c;
 
         assert false
         report "End of TestBench"
