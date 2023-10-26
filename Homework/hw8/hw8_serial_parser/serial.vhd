@@ -26,7 +26,7 @@ signal state, next_state : state_t;
 
 begin
 
-    the_machine: process(serial, RST)
+    the_machine: process(state, serial, RST)
     begin
         if RST = '1' then
             next_state <= zero;
