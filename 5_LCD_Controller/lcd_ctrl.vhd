@@ -31,27 +31,28 @@ type state_t is (Fn_1, Fn_2, Fn_3, Fn_4,
 						Ret_Home);
 
 signal state, next_state : state_t;
-signal counter : std_logic_vector(3 downto 0);
+signal counter : unsigned(3 downto 0);
 
 begin
 
-	 button_p: process(RST, button_signal)
+	 button_p: process(RST, clock, button_signal)
 		variable button_prev : std_logic;
 		variable count_state : std_logic_vector(3 downto 0);
 	 begin
-		if RST= '0' then
-			count_state := (others => '0');
+		if RST = '0' then
+			counter <= (others => '0');
 			button_prev := button_signal;
-		elsif button_prev /= button_signal then
-			count_state := count_state + 1;
-			button_prev := button_signal;
-		else
-			count_state := count_state;
+		elsif clock'EVENT and clock = '1' then
+			if button_prev /= button_signal then
+				counter <= counter + 1;
+				button_prev := button_signal;
+			else
+				counter <= counter;
+			end if;
 		end if;
-		counter <= count_state;
 	 end process;
 
-    the_machine: process(state, RST)
+    the_machine: process(state, RST, counter)
 	 begin
         if RST = '0' then
             next_state <= Fn_1;
@@ -139,75 +140,63 @@ begin
 
 					 when number =>
 						 -- determine what number to display
-						 if counter = "0000" then
+						 if counter = 0 then
 							 LCD_DATA <= "00110000"; -- '0'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0001" then
+						 elsif counter = 1 then
 							 LCD_DATA <= "00110001"; -- '1'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0010" then
+						 elsif counter = 2 then
 							 LCD_DATA <= "00110010"; -- '2'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0011" then
+						 elsif counter = 3 then
 							 LCD_DATA <= "00110011"; -- '3'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0100" then
+						 elsif counter = 4 then
 						    LCD_DATA <= "00110100"; -- '4'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0101" then
+						 elsif counter = 5 then
 						    LCD_DATA <= "00110101"; -- '5'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0110" then
+						 elsif counter = 6 then
 						    LCD_DATA <= "00110110"; -- '6'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "0111" then
+						 elsif counter = 7 then
 						    LCD_DATA <= "00110111"; -- '7'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "1000" then
+						 elsif counter = 8 then
 						    LCD_DATA <= "00111000"; -- '8'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 						    next_state <= num_address;
-						 elsif counter = "1001" then
+						 elsif counter = 9 then
 						    LCD_DATA <= "00111001"; -- '9'
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 							 next_state <= num_address;
-						 elsif counter = "1010" then
-						    LCD_DATA <= "01000001"; -- 'A'
-							 LCD_RS <= '1';
-							 LCD_RW <= '0';
-							 next_state <= num_address;
-						 else
+						 elsif counter > 10 then
 							 -- clear display
 							 LCD_DATA <= "00000001";
 							 LCD_RS <= '0';
 							 LCD_RW <= '0';
 							 next_state <= Set_Address_V;
 						 end if;
-						 				 
-					 
-					 when Ret_Home =>
-						  LCD_DATA <= (others => '0');
-						  LCD_RS <= '0';
-						  LCD_RW <= '0';
-						-- num add: "11001111"
 					 when others =>
                     -- Do nothing
             end case;
