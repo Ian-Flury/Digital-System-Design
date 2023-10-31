@@ -13,7 +13,8 @@ entity lcd_ctrl is
         LCD_RW      : out std_logic;
         LCD_RS      : out std_logic;
         LCD_ON      : out std_logic;
-        LCD_BLON    : out std_logic
+        LCD_BLON    : out std_logic;
+		  button_signal : in std_logic
     );
 end lcd_ctrl;
 
@@ -26,15 +27,31 @@ architecture rtl of lcd_ctrl is
 type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, 
 						Clr_Disp, Disp_Ctl, Entry_Mode, Set_Address_V,
 						V, H, Set_Address_D, D, L, 
-						num_address, number, Ret_Home);
+						num_address, number, max_nums,
+						Ret_Home);
 
 signal state, next_state : state_t;
+signal counter : std_logic_vector(3 downto 0);
 
 begin
 
+	 button_p: process(RST, button_signal)
+		variable button_prev : std_logic;
+		variable count_state : std_logic_vector(3 downto 0);
+	 begin
+		if RST= '0' then
+			count_state := (others => '0');
+			button_prev := button_signal;
+		elsif button_prev /= button_signal then
+			count_state := count_state + 1;
+			button_prev := button_signal;
+		else
+			count_state := count_state;
+		end if;
+		counter <= count_state;
+	 end process;
 
     the_machine: process(state, RST)
-		  variable num : unsigned(3 downto 0);
 	 begin
         if RST = '0' then
             next_state <= Fn_1;
@@ -83,7 +100,7 @@ begin
 						  LCD_DATA <= "00000110";
                     LCD_RS <= '0';
                     LCD_RW <= '0';
-                    next_state <= Set_Address_V;
+                    next_state <= num_address;
                 when Set_Address_V =>
 						  LCD_DATA <= "10000000";
 						  LCD_RS <= '0';
@@ -113,17 +130,79 @@ begin
 						  LCD_DATA <= "01001100";
 						  LCD_RS <= '1';
 						  LCD_RW <= '0';
-						  next_state <= num_address;
+						  next_state <= Set_Address_D;
 					 when num_address =>
 						  LCD_DATA <= "11001111";
 						  LCD_RS <= '0';
 						  LCD_RW <= '0';
 						  next_state <= number;
+
 					 when number =>
-						  LCD_DATA <= "00110000";
-						  LCD_RS <= '1';
-						  LCD_RW <= '0';
-						  next_state <= num_address;
+						 -- determine what number to display
+						 if counter = "0000" then
+							 LCD_DATA <= "00110000"; -- '0'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0001" then
+							 LCD_DATA <= "00110001"; -- '1'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0010" then
+							 LCD_DATA <= "00110010"; -- '2'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0011" then
+							 LCD_DATA <= "00110011"; -- '3'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0100" then
+						    LCD_DATA <= "00110100"; -- '4'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0101" then
+						    LCD_DATA <= "00110101"; -- '5'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0110" then
+						    LCD_DATA <= "00110110"; -- '6'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "0111" then
+						    LCD_DATA <= "00110111"; -- '7'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "1000" then
+						    LCD_DATA <= "00111000"; -- '8'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+						    next_state <= num_address;
+						 elsif counter = "1001" then
+						    LCD_DATA <= "00111001"; -- '9'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+							 next_state <= num_address;
+						 elsif counter = "1010" then
+						    LCD_DATA <= "01000001"; -- 'A'
+							 LCD_RS <= '1';
+							 LCD_RW <= '0';
+							 next_state <= num_address;
+						 else
+							 -- clear display
+							 LCD_DATA <= "00000001";
+							 LCD_RS <= '0';
+							 LCD_RW <= '0';
+							 next_state <= Set_Address_V;
+						 end if;
+						 				 
+					 
 					 when Ret_Home =>
 						  LCD_DATA <= (others => '0');
 						  LCD_RS <= '0';
