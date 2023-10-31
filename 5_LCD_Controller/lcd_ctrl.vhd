@@ -23,7 +23,10 @@ architecture rtl of lcd_ctrl is
 -- Note: the "running" mode is the state of the initialization machine when 
 --       init is complete and the display is ready to be communicated with normally,
 --       i.e. a character write sequence can be performed.
-type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, Clr_Disp, Disp_Ctl, Entry_Mode, Set_Address_V, V, H, Set_Address_D, D, L, Set_Address_num, num, Ret_Home);
+type state_t is (Fn_1, Fn_2, Fn_3, Fn_4, 
+						Clr_Disp, Disp_Ctl, Entry_Mode, Set_Address_V,
+						V, H, Set_Address_D, D, L, 
+						num_address, number, Ret_Home);
 
 signal state, next_state : state_t;
 
@@ -82,7 +85,7 @@ begin
                     LCD_RW <= '0';
                     next_state <= Set_Address_V;
                 when Set_Address_V =>
-						  LCD_DATA <= (others => '0');
+						  LCD_DATA <= "10000000";
 						  LCD_RS <= '0';
 						  LCD_RW <= '0';
 						  next_state <= V;
@@ -97,7 +100,7 @@ begin
 						  LCD_RW <= '0';
 						  next_state <= Set_Address_D;
 					 when Set_Address_D =>
-						  LCD_DATA <= "01001000";
+						  LCD_DATA <= "11000010";
 						  LCD_RS <= '0';
 						  LCD_RW <= '0';
 						  next_state <= D;
@@ -110,7 +113,17 @@ begin
 						  LCD_DATA <= "01001100";
 						  LCD_RS <= '1';
 						  LCD_RW <= '0';
-						  next_state <= L;
+						  next_state <= num_address;
+					 when num_address =>
+						  LCD_DATA <= "11001111";
+						  LCD_RS <= '0';
+						  LCD_RW <= '0';
+						  next_state <= number;
+					 when number =>
+						  LCD_DATA <= "00110000";
+						  LCD_RS <= '1';
+						  LCD_RW <= '0';
+						  next_state <= num_address;
 					 when Ret_Home =>
 						  LCD_DATA <= (others => '0');
 						  LCD_RS <= '0';
