@@ -16,7 +16,7 @@ end lcd_top_level_tb;
 
 architecture beh of lcd_top_level_tb is
 
-    component lcd_ctrl_top
+    component lcd_top_level
         port(
             clock_50M   : in std_logic;
             KEY3        : in std_logic;
@@ -28,7 +28,7 @@ architecture beh of lcd_top_level_tb is
             LCD_ON      : out std_logic;
             LCD_BLON    : out std_logic
         );
-    end component lcd_ctrl_top;
+    end component lcd_top_level;
 
 -- constant declaration:
     constant period_c   : time := 20 ns;
@@ -51,7 +51,7 @@ architecture beh of lcd_top_level_tb is
 begin -- beh
 
 -- mapping:
-    lcd_top_level_instance: lcd_ctrl_top
+    lcd_top_level_instance: lcd_top_level
     port map(
         clock_50M => ck,
         KEY3 => KEY3_net,

@@ -17,7 +17,6 @@ use work.all;
 -- it to zero and start counting from there.
 
 
-
 entity swdbnc is port(
     CLK_50M         : in std_logic;
     KEY0  			: in std_logic;
@@ -27,7 +26,7 @@ entity swdbnc is port(
 end swdbnc;
      
 architecture rtl of swdbnc is
-    
+
     -- set LIMIT_c to 10 for simulation
     -- should be 2500000 for synthesis
      constant LIMIT_c : integer := 2500000;
@@ -77,8 +76,8 @@ begin
             end if;
         end if;
     end process;
-    
-    
+
+
     timer2_p: process(CLK_50M)
         variable count2 : unsigned(21 downto 0);
     begin
@@ -122,7 +121,6 @@ begin
         end process;
     LEDG0 <= led_state;
 
-
     reset_p: process(CLK_50M)
     begin
         -- need to set previous state back to 1 to make the first process to work
@@ -136,6 +134,3 @@ begin
     end process;
 
 end rtl;
-
-
-
