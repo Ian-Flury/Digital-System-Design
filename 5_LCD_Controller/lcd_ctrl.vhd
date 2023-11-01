@@ -190,7 +190,7 @@ begin
 							 LCD_RS <= '1';
 							 LCD_RW <= '0';
 							 next_state <= num_address;
-						 elsif counter > 10 then
+						 elsif counter > 9 then
 							 -- clear display
 							 LCD_DATA <= "00000001";
 							 LCD_RS <= '0';
