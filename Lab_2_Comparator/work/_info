@@ -12,20 +12,19 @@ Z0 dC:/Users/ianfl/MobaXterm/home/QuartusProjects/Lab_2_Comparator
 Ecmp
 Z1 w1694569412
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 42
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
 Z4 8./cmp.vhd
 Z5 F./cmp.vhd
 l0
-L13 1
+L13
 VzmBGLoZFP=e?mzf]3S1K50
 !s100 Q;1T^nBE8YJz]n5P]G7Lg3
-Z6 OV;C;2020.1;71
+Z6 OV;C;10.5b;63
 33
-Z7 !s110 1695143413
+Z7 !s110 1702771589
 !i10b 1
-Z8 !s108 1695143413.000000
+Z8 !s108 1702771589.000000
 Z9 !s90 -work|work|-2008|-explicit|./cmp.vhd|
 Z10 !s107 ./cmp.vhd|
 !i113 1
@@ -35,9 +34,8 @@ Artl
 R2
 R3
 DEx4 work 3 cmp 0 22 zmBGLoZFP=e?mzf]3S1K50
-!i122 42
 l30
-L29 35
+L29
 VGc]8>hS:7AaOHe?TlAmlf2
 !s100 mO<9=>`:eiIGiM1mGl0gF1
 R6
@@ -54,12 +52,11 @@ Ecmp_tb
 Z13 w1694646519
 R2
 R3
-!i122 43
 R0
 Z14 8./cmp_tb.vhd
 Z15 F./cmp_tb.vhd
 l0
-L5 1
+L5
 VddFL7c0lhH?33HRk5z]1f0
 !s100 zlBX3flgBBbGRjB0IIlN[2
 R6
@@ -76,11 +73,10 @@ Atb
 R2
 R3
 Z18 DEx4 work 6 cmp_tb 0 22 ddFL7c0lhH?33HRk5z]1f0
-!i122 43
 l36
-Z19 L8 115
-Z20 VBPZff:Z3S7cLM=[jXgLXb0
-Z21 !s100 zX:lW8;kgf6@ci^aPKSOm0
+L8
+Z19 VBPZff:Z3S7cLM=[jXgLXb0
+Z20 !s100 zX:lW8;kgf6@ci^aPKSOm0
 R6
 33
 R7

@@ -1,38 +1,14 @@
-# Reading pref.tcl
-# vsim -gui -voptargs="+acc" work.cmp_tb -do "waves.do" 
-# Start time: 10:10:22 on Sep 19,2023
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# vsim -gui -voptargs="+acc" work.cmp_tb -do "scripts/waves.do" 
+# Start time: 16:06:35 on Dec 16,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.cmp_tb(tb)
 # Loading work.cmp(rtl)
-# waves.do
-# invalid command name "waves.do"
-do waves.do
-# Cannot open macro file: waves.do
-do ./scripts/waves.do
-do ./scripts/waves.do
-# Closing VCD file "cmp.vcd"
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
+# do scripts/waves.do
 # ** Failure: End of TestBench
 #    Time: 1600 ns  Iteration: 0  Process: /cmp_tb/tb File: ./cmp_tb.vhd
 # Break in Process tb at ./cmp_tb.vhd line 118
 # 0 ps
 # 1680 ns
-clear 
-# couldn't execute "C:\Users\ianfl\MobaXterm\home\slash\bin\clear": no such file or directory
-do ./scripts/waves.do
-# Closing VCD file "cmp.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ** Failure: End of TestBench
-#    Time: 1600 ns  Iteration: 0  Process: /cmp_tb/tb File: ./cmp_tb.vhd
-# Break in Process tb at ./cmp_tb.vhd line 118
-# 0 ps
-# 1680 ns
-# End time: 10:34:09 on Sep 19,2023, Elapsed time: 0:23:47
-# Errors: 1, Warnings: 0

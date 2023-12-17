@@ -1,6 +1,6 @@
-# Reading pref.tcl
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # vsim -gui -voptargs="+acc" work.swdbnc_tb -do "./scripts/waves.do" 
-# Start time: 12:07:25 on Oct 03,2023
+# Start time: 16:10:24 on Dec 16,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
