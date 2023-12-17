@@ -16,7 +16,7 @@ end tail_light_top;
 
 architecture structural of tail_light_top is
 
-	signal intermed_clk : std_logic;
+    signal intermed_clk : std_logic;
 
 component counter
     port(
