@@ -23,14 +23,14 @@ architecture structural of lcd_top_level is
 
     signal two_ms_clk : std_logic;
     signal button_signal : std_logic;
-    
+
     component swdbnc
-    port(
-        CLK_50M         : in std_logic;
-        KEY0  			: in std_logic;
-        KEY3			: in std_logic;
-        LEDG0 			: out std_logic
-   );
+        port(
+            CLK_50M         : in std_logic;
+            KEY0  			: in std_logic;
+            KEY3			: in std_logic;
+            LEDG0 			: out std_logic
+        );
     end component;
      
     component counter
@@ -58,14 +58,14 @@ architecture structural of lcd_top_level is
 begin
 
 
-     debouncer_1: swdbnc port
-     map(
-         CLK_50M => clock_50M,
-         KEY0 => KEY3,
-         KEY3 => KEY0,
-         LEDG0 => button_signal
-     );
-     
+    debouncer_1: swdbnc port
+    map(
+        CLK_50M => clock_50M,
+        KEY0 => KEY3,
+        KEY3 => KEY0,
+        LEDG0 => button_signal
+    );
+
     counter_1: counter port
     map(
         clock => clock_50M,
