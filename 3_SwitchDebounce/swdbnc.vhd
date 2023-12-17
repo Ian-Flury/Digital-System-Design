@@ -98,7 +98,7 @@ begin
                     LED_FLAG <= '1';
                     led_flag_off <= '1';
                 else
-                    
+
                 end if;
             end if;
         end if;
@@ -120,8 +120,8 @@ begin
             end if;
         end if;
         end process;
-    LEDG0 <= led_state;
 
+    LEDG0 <= led_state;
 
     reset_p: process(CLK_50M)
     begin
@@ -136,6 +136,3 @@ begin
     end process;
 
 end rtl;
-
-
-

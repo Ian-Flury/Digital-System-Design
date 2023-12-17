@@ -14,7 +14,7 @@ end swdbnc_tb;
 
 architecture tb of swdbnc_tb is 
     constant period_c : time := 10 ns;
-    
+
     signal CLK_50M_net  : std_logic;
     signal KEY0_net     : std_logic;
     signal KEY3_net     : std_logic;
@@ -26,7 +26,7 @@ architecture tb of swdbnc_tb is
         KEY0        : in std_logic;
         KEY3        : in std_logic;    
         LEDG0       : out std_logic
-    ); 
+    );
     end component swdbnc;
 
 begin
@@ -40,39 +40,39 @@ begin
     );
 
     tb_clk: process
-        begin
-            CLK_50M_net <= '1';
-            wait for period_c / 2;
-            CLK_50M_net <= '0';
-            wait for period_c / 2;
+    begin
+        CLK_50M_net <= '1';
+        wait for period_c / 2;
+        CLK_50M_net <= '0';
+        wait for period_c / 2;
     end process tb_clk;
 
     tb: process
-        begin
-            -- setup signals
-            KEY0_net <= '1';
-            
-            -- do a reset
-            KEY3_net <= '0';
-            wait for 50 ns;
-            KEY3_net <= '1';
-            wait for 25 ns;
-            
-            -- first button press
-            KEY0_net <= '1';
-            wait for 50 ns;
-            KEY0_net <= '0';
-            wait for 50 ns;
-            KEY0_net <= '1';
+    begin
+        -- setup signals
+        KEY0_net <= '1';
+        
+        -- do a reset
+        KEY3_net <= '0';
+        wait for 50 ns;
+        KEY3_net <= '1';
+        wait for 25 ns;
+        
+        -- first button press
+        KEY0_net <= '1';
+        wait for 50 ns;
+        KEY0_net <= '0';
+        wait for 50 ns;
+        KEY0_net <= '1';
 
-            wait for 350 ns;
+        wait for 350 ns;
 
-            -- second button press
-            KEY0_net <= '0';
-            wait for 50 ns;
-            KEY0_net <= '1';
+        -- second button press
+        KEY0_net <= '0';
+        wait for 50 ns;
+        KEY0_net <= '1';
 
-            wait for 350 ns;
+        wait for 350 ns;
 
         assert false
         report "End of TestBench"
